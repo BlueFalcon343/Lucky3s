@@ -15,18 +15,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "LookX",
+                    "name": "Look",
                     "type": "PassThrough",
                     "id": "2df5ef4c-03b0-4ed0-911f-8d7f46be17cf",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "LookKey",
-                    "type": "PassThrough",
-                    "id": "e3e73a56-2f3d-489f-9921-228909674ae4",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -151,7 +142,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "LookX",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -162,7 +153,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Touch",
-                    "action": "LookKey",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
