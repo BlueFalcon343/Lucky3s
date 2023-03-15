@@ -13,15 +13,24 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementVector;
     private Vector3 movement;
 
-    public float jumpforce = 10f;
-
-
     // health variables
     public int maxHealth = 10;
     public int health { get { return currentHealth; } }
     int currentHealth;
 
+    //Jump and Boost Mechanics
+    [Header("Jump and Boost")]
+    public int jumpBoost = 5;
+    public float jumpforce = 12f;
+
+    //Jump Recharge and Ground Check
+    [Header("Ground Check")]
+    public float playerHeight;
+    public LayerMask WhatIsGround;
+    bool grounded;
+
     //Gun firing location and usage
+    [Header("Gun Location")]
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject PlayerProjectile;
 
@@ -35,12 +44,28 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         movement = (movementY * FindObjectOfType<CameraController>()._orientation.forward) + (movementX * FindObjectOfType<CameraController>()._orientation.right);
         rb.AddForce(movement.normalized * MOVESPEED, ForceMode.Force);
         movement = Vector3.zero;
+
+        //Set Force and Refuel Boost Jumps
+        if(grounded == true)
+        {
+            jumpforce = 12f;
+        }
+        while (grounded == true && jumpBoost <= 4)
+        {
+               jumpBoost = jumpBoost + 1;
+        }
+    }
+
+    void Update()
+    {
+        //Ground Check Raycast 
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, WhatIsGround);
     }
 
     void OnMove(InputValue movementValue)
@@ -50,9 +75,20 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
+    // Jump and Jump Boost
     void OnJump()
     {
-        rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
+        if(grounded == true)
+        {
+            rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
+        }
+
+        if(jumpBoost >= 1 && grounded == false)
+        {
+            jumpforce = 10f;
+            jumpBoost = jumpBoost - 1;
+            rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
+        }
     }
 
     public void ChangeHealth(int amount)
@@ -61,6 +97,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
     }
 
+    // Ray and Freeze Ray
     public void OnFire()
     {
         PlayerProjectile.tag = "Fire";
