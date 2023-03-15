@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fire
+  - AltFire
+  - Alive
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - WhatIsGround
   - WhatIsPlayer
   - EnemyProjectile
-  - Player Projectile
+  - PlayerProjectile
   - Enemy
   - 
   - 

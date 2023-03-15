@@ -13,10 +13,17 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementVector;
     private Vector3 movement;
 
+    public float jumpforce = 10f;
+
+
     // health variables
     public int maxHealth = 10;
     public int health { get { return currentHealth; } }
     int currentHealth;
+
+    //Gun firing location and usage
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject PlayerProjectile;
 
 
     // Start is called before the first frame update
@@ -43,9 +50,26 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
+    void OnJump()
+    {
+        rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
+    }
+
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
+    public void OnFire()
+    {
+        PlayerProjectile.tag = "Fire";
+        Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
+    }
+
+    public void OnAltFire()
+    {
+        PlayerProjectile.tag = "AltFire";
+        Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
     }
 }

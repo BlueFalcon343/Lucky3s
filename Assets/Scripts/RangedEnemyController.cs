@@ -25,10 +25,14 @@ public class RangedEnemyController : MonoBehaviour
     bool alreadyAttacked;
     public GameObject projectile;
 
+    //Tag Changing Reference 
+    public GameObject EnemyRanged;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        EnemyRanged.tag = "Alive";
     }
 
     private void Update()
@@ -106,5 +110,25 @@ public class RangedEnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    //Stun and Freeze Enemys
+    IEnumerator OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            yield return new WaitForSeconds(2f);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
+
+        if (other.gameObject.CompareTag("AltFire"))
+        {
+            this.enabled = false;
+            EnemyRanged.tag = "Dead";
+            //gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            //yield return new WaitForSeconds(2f);
+            //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
     }
 }

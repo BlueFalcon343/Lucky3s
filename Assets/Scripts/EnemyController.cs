@@ -24,10 +24,14 @@ public class EnemyController : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    //Tag Changing Reference 
+    public GameObject Enemy;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        Enemy.tag = "Alive";
     }
 
     private void Update()
@@ -99,5 +103,25 @@ public class EnemyController : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    //Stun and Freeze Enemys
+    IEnumerator OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            yield return new WaitForSeconds(2f);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
+
+        if (other.gameObject.CompareTag("AltFire"))
+        {
+            this.enabled = false;
+            Enemy.tag = "Dead";
+            //gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            //yield return new WaitForSeconds(2f);
+            //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
     }
 }
