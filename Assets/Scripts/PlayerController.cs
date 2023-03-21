@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     public float movementX;
     public float movementY;
     private Vector2 movementVector;
+    public Vector2 rotationVector;
     private Vector3 movement;
+    public Transform _orientation;
+    public GameObject _camera;
 
     // health variables
     public int maxHealth = 10;
@@ -63,7 +66,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
+    {       
         //Ground Check Raycast 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, WhatIsGround);
     }
@@ -73,6 +76,12 @@ public class PlayerController : MonoBehaviour
         movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementY = movementVector.y;
+    }
+
+    void OnLook(InputValue rotationValue)
+    {
+        // receives mouse/joystick input
+        rotationVector = rotationValue.Get<Vector2>();
     }
 
     // Jump and Jump Boost

@@ -7,8 +7,13 @@ public class CameraController : MonoBehaviour
     public Transform _orientation;
     public Transform _player;
     public Transform _playerBody;
-    public float ROTATESPEED = 1f;
     private Rigidbody rb;
+    public Vector3 nextPosition;
+    public Quaternion nextRotation;
+    public float ROTATESPEED = 2.0f;
+
+    public float rotationPower = 1.5f;
+    public float rotationLerp = 0.5f;
 
     void Start()
     {
