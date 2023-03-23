@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3413990725974400092}
   m_Layer: 7
   m_Name: PlayerProjectile
-  m_TagString: Fire
+  m_TagString: AltFire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
