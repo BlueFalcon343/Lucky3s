@@ -11,6 +11,9 @@ public class RangedEnemyController : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    //Audio
+    public AudioSource freezeImpact;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -124,6 +127,7 @@ public class RangedEnemyController : MonoBehaviour
 
         if (other.gameObject.CompareTag("AltFire"))
         {
+            freezeImpact.Play();
             this.enabled = false;
             EnemyRanged.tag = "Dead";
             //gameObject.GetComponent<NavMeshAgent>().isStopped = true;

@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
 
+    // audio
+    public AudioSource waterSource;
+    public AudioSource freezeSource;
+
     // health variables
     public int maxHealth = 10;
     public int health { get { return currentHealth; } }
@@ -111,11 +115,13 @@ public class PlayerController : MonoBehaviour
     {
         PlayerProjectile.tag = "Fire";
         Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
+        waterSource.Play();
     }
 
     public void OnAltFire()
     {
         PlayerProjectile.tag = "AltFire";
         Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
+        freezeSource.Play();
     }
 }

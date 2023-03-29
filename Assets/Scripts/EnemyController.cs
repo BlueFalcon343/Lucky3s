@@ -11,6 +11,9 @@ public class EnemyController : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    //Audio
+    public AudioSource freezeHit;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -117,6 +120,7 @@ public class EnemyController : MonoBehaviour
 
         if (other.gameObject.CompareTag("AltFire"))
         {
+            freezeHit.Play();
             this.enabled = false;
             Enemy.tag = "Dead";
             //gameObject.GetComponent<NavMeshAgent>().isStopped = true;
