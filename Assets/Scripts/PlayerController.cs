@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
 
-
     // health variables
     public int maxHealth = 10;
     public int health { get { return currentHealth; } }
@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     [Header("Jump and Boost")]
     public int jumpBoost = 5;
     public float jumpforce = 12f;
+    public Transform jumpPointLeft;
+    public Transform jumpPointRight;
 
     //Jump Recharge and Ground Check
     [Header("Ground Check")]
@@ -42,6 +44,11 @@ public class PlayerController : MonoBehaviour
     public AudioSource freezeSource;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject PlayerProjectile;
+
+    //Particles
+    public ParticleSystem WaterGun;
+    public ParticleSystem FreezeGun;
+    public ParticleSystem BootFlame;
 
 
     // Start is called before the first frame update
@@ -106,6 +113,8 @@ public class PlayerController : MonoBehaviour
             jumpforce = 10f;
             jumpBoost = jumpBoost - 1;
             rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
+            Instantiate(BootFlame, jumpPointLeft.position, jumpPointLeft.rotation);
+            Instantiate(BootFlame, jumpPointRight.position, jumpPointRight.rotation);
         }
     }
 
@@ -124,6 +133,7 @@ public class PlayerController : MonoBehaviour
             Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
             gunheat = fireRate;
             waterSource.Play();
+            Instantiate(WaterGun, firePoint.position, firePoint.rotation);
         }
     }
 
@@ -135,6 +145,7 @@ public class PlayerController : MonoBehaviour
             Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
             coreAmmo = coreAmmo - 1;
             freezeSource.Play();
+            Instantiate(FreezeGun, firePoint.position, firePoint.rotation);
         }
     }
 
@@ -145,5 +156,10 @@ public class PlayerController : MonoBehaviour
         {
             coreAmmo = coreAmmo = 1;
         }
+
+        /*if (other.gameObject.CompareTag("Portal"))
+        {
+            SceneManager.LoadScene("MarsLevel");
+        }*/
     }
 }
