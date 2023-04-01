@@ -16,9 +16,6 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
 
-    // audio
-    public AudioSource waterSource;
-    public AudioSource freezeSource;
 
     // health variables
     public int maxHealth = 10;
@@ -37,7 +34,12 @@ public class PlayerController : MonoBehaviour
     bool grounded;
 
     //Gun firing location and usage
-    [Header("Gun Location")]
+    [Header("Gun Point, Ammo, Audio")]
+    float gunheat;
+    const float fireRate = 0.9f;
+    public int coreAmmo = 0;
+    public AudioSource waterSource;
+    public AudioSource freezeSource;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject PlayerProjectile;
 
@@ -73,6 +75,9 @@ public class PlayerController : MonoBehaviour
     {       
         //Ground Check Raycast 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, WhatIsGround);
+
+        // Fire Rate
+        if (gunheat > 0) gunheat -= Time.deltaTime;
     }
 
     void OnMove(InputValue movementValue)
@@ -113,15 +118,32 @@ public class PlayerController : MonoBehaviour
     // Ray and Freeze Ray
     public void OnFire()
     {
-        PlayerProjectile.tag = "Fire";
-        Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
-        waterSource.Play();
+        if (gunheat <= 0)
+        {
+            PlayerProjectile.tag = "Fire";
+            Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
+            gunheat = fireRate;
+            waterSource.Play();
+        }
     }
 
     public void OnAltFire()
     {
-        PlayerProjectile.tag = "AltFire";
-        Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
-        freezeSource.Play();
+        if (coreAmmo == 1)
+        {
+            PlayerProjectile.tag = "AltFire";
+            Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
+            coreAmmo = coreAmmo - 1;
+            freezeSource.Play();
+        }
+    }
+
+    // Core Ammo
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("EnergyCore"))
+        {
+            coreAmmo = coreAmmo = 1;
+        }
     }
 }
