@@ -4886,7 +4886,7 @@ GameObject:
   - component: {fileID: 5533833143459107580}
   - component: {fileID: 5533833143459107570}
   - component: {fileID: 5533833143459107581}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14684,7 +14684,7 @@ GameObject:
   - component: {fileID: 5533833144569762532}
   - component: {fileID: 5533833144569762554}
   - component: {fileID: 5533833144569762533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -19564,7 +19564,7 @@ GameObject:
   - component: {fileID: 5533833144840020817}
   - component: {fileID: 5533833144840020823}
   - component: {fileID: 5533833144840020822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bubbles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

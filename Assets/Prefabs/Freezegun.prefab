@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2950494478450589567}
   - component: {fileID: 2950494478450589561}
   - component: {fileID: 2950494478450589566}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4901,7 +4901,7 @@ GameObject:
   - component: {fileID: 2950494478736715301}
   - component: {fileID: 2950494478736715303}
   - component: {fileID: 2950494478736715300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: AltFire
   m_Icon: {fileID: 0}
@@ -24391,7 +24391,7 @@ GameObject:
   - component: {fileID: 2950494479927188013}
   - component: {fileID: 2950494479927188015}
   - component: {fileID: 2950494479927188012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Burst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29300,7 +29300,7 @@ GameObject:
   - component: {fileID: 2950494480411156257}
   - component: {fileID: 2950494480411156259}
   - component: {fileID: 2950494480411156256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vaccuum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
