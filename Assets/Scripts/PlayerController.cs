@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -17,7 +18,16 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
 
+
+    [Header("UI")]
+    public Slider HealthBarUI;
+    public Slider JumpBoostUI;
+    public Image EnergyCoreUI;
+    public bool EnergyCoreUISet;
+
+
     // health variables
+    [Header("Health")]
     public int maxHealth = 10;
     public int health { get { return currentHealth; } }
     int currentHealth;
@@ -58,6 +68,12 @@ public class PlayerController : MonoBehaviour
 
         //set health
         currentHealth = maxHealth;
+
+        //Setting UI
+        JumpBoostUI.value = jumpBoost;
+        HealthBarUI.value = currentHealth;
+        EnergyCoreUI.enabled = false;
+
     }
 
     
@@ -75,6 +91,7 @@ public class PlayerController : MonoBehaviour
         while (grounded == true && jumpBoost <= 4)
         {
                jumpBoost = jumpBoost + 1;
+               JumpBoostUI.value = jumpBoost;
         }
     }
 
@@ -85,6 +102,16 @@ public class PlayerController : MonoBehaviour
 
         // Fire Rate
         if (gunheat > 0) gunheat -= Time.deltaTime;
+
+        //Items UI
+        if(coreAmmo == 1)
+        {
+            EnergyCoreUI.enabled = true;
+        }
+        else
+        {
+            EnergyCoreUI.enabled = false;
+        }
     }
 
     void OnMove(InputValue movementValue)
@@ -112,6 +139,7 @@ public class PlayerController : MonoBehaviour
         {
             jumpforce = 10f;
             jumpBoost = jumpBoost - 1;
+            JumpBoostUI.value = jumpBoost;
             rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
             Instantiate(BootFlame, jumpPointLeft.position, jumpPointLeft.rotation);
             Instantiate(BootFlame, jumpPointRight.position, jumpPointRight.rotation);
@@ -121,6 +149,7 @@ public class PlayerController : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        HealthBarUI.value = currentHealth;
         Debug.Log(currentHealth + "/" + maxHealth);
     }
 
@@ -130,10 +159,10 @@ public class PlayerController : MonoBehaviour
         if (gunheat <= 0)
         {
             PlayerProjectile.tag = "Fire";
-            Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
-            gunheat = fireRate;
             waterSource.Play();
+            Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
             Instantiate(WaterGun, firePoint.position, firePoint.rotation);
+            gunheat = fireRate;
         }
     }
 
@@ -142,10 +171,10 @@ public class PlayerController : MonoBehaviour
         if (coreAmmo == 1)
         {
             PlayerProjectile.tag = "AltFire";
-            Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
-            coreAmmo = coreAmmo - 1;
             freezeSource.Play();
+            Instantiate(PlayerProjectile, firePoint.position, firePoint.rotation);
             Instantiate(FreezeGun, firePoint.position, firePoint.rotation);
+            coreAmmo = coreAmmo - 1;           
         }
     }
 
