@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6785974943418685023}
   - component: {fileID: 8775359566058414741}
   - component: {fileID: 435988915844615968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Textured Cat Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7118127743909446464}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 364.55008, y: 0.00000023841858, z: 242.84772}
-  m_LocalScale: {x: 900, y: 900, z: 900}
+  m_LocalScale: {x: 3000, y: 3000, z: 3000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6785974943418685023
 MeshFilter:
