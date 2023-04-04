@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     public Slider HealthBarUI;
     public Slider JumpBoostUI;
     public Image EnergyCoreUI;
-    public bool EnergyCoreUISet;
+    public Image CatnipUI;
+    public int CatnipItem;
 
 
     // health variables
@@ -116,6 +117,15 @@ public class PlayerController : MonoBehaviour
         {
             EnergyCoreUI.enabled = false;
         }
+
+        if (CatnipItem == 1)
+        {
+            CatnipUI.enabled = true;
+        }
+        else
+        {
+            CatnipUI.enabled = false;
+        }
     }
 
     void OnMove(InputValue movementValue)
@@ -182,12 +192,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Core Ammo
+    // Item Collection and Portals
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("EnergyCore"))
         {
             coreAmmo = coreAmmo = 1;
+        }
+
+        if (other.gameObject.CompareTag("Catnip"))
+        {
+            CatnipItem = CatnipItem = 1;
         }
 
         if (other.gameObject.CompareTag("Portal"))
