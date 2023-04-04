@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {       
         //Ground Check Raycast 
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, WhatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 1.5f, WhatIsGround);
 
         // Fire Rate
         if (gunheat > 0) gunheat -= Time.deltaTime;
