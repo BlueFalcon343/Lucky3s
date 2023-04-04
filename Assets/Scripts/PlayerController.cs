@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
 
+    //animator
+    Animator animator;
+
+
 
     [Header("UI")]
     public Slider HealthBarUI;
@@ -73,7 +77,7 @@ public class PlayerController : MonoBehaviour
         JumpBoostUI.value = jumpBoost;
         HealthBarUI.value = currentHealth;
         EnergyCoreUI.enabled = false;
-
+        animator = GetComponent<Animator>();
     }
 
     
@@ -186,9 +190,26 @@ public class PlayerController : MonoBehaviour
             coreAmmo = coreAmmo = 1;
         }
 
-        /*if (other.gameObject.CompareTag("Portal"))
+        if (other.gameObject.CompareTag("Portal"))
         {
             SceneManager.LoadScene("MarsLevel");
-        }*/
+        }
+    }
+    void handleAnimation()
+    {
+        bool isWalking = animator.GetBool("isWalking");
+        bool isRunning = animator.GetBool("isRunning");
+
+        if((movement.x > 0f || movement.y > 0f) && !isWalking)
+        {
+            Debug.Log("Walking");
+            animator.SetBool("isWalking", true);
+        }
+
+        else if((movement.x == 0f || movement.y == 0f) && isWalking)
+        {
+            Debug.Log("NotWalking");
+            animator.SetBool("isWalking", false);
+        }
     }
 }

@@ -9781,7 +9781,7 @@ GameObject:
   - component: {fileID: 2950494478890699837}
   - component: {fileID: 2950494478890699839}
   - component: {fileID: 2950494478890699836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flakes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14641,7 +14641,7 @@ GameObject:
   - component: {fileID: 2950494478981645256}
   - component: {fileID: 2950494478981645262}
   - component: {fileID: 2950494478981645257}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19515,7 +19515,7 @@ GameObject:
   - component: {fileID: 2950494479759573748}
   - component: {fileID: 2950494479759573750}
   - component: {fileID: 2950494479759573751}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Freezegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

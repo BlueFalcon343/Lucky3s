@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5533833143421024071}
   - component: {fileID: 5533833143421024069}
   - component: {fileID: 5533833143421024068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WaterGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9785,7 +9785,7 @@ GameObject:
   - component: {fileID: 5533833143503516208}
   - component: {fileID: 5533833143503516214}
   - component: {fileID: 5533833143503516209}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GunSpray
   m_TagString: Untagged
   m_Icon: {fileID: 0}

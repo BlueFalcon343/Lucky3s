@@ -34,7 +34,7 @@ Transform:
   - {fileID: 3941585848726238777}
   - {fileID: 3193982939925155205}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3941585848256660934
 ParticleSystem:
@@ -14457,7 +14457,7 @@ GameObject:
   - component: {fileID: 1681733667060075593}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14488,5 +14488,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.47278, y: 9.419613, z: 1}
-  m_Center: {x: -0.1685183, y: -0.09722185, z: 0}
+  m_Size: {x: 14.386852, y: 14.811899, z: 1}
+  m_Center: {x: -0.37376055, y: 1.8341467, z: 0}
