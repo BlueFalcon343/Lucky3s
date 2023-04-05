@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem WaterGun;
     public ParticleSystem FreezeGun;
     public ParticleSystem BootFlame;
+    public ParticleSystem Portal;
 
 
     // Start is called before the first frame update
@@ -79,6 +80,8 @@ public class PlayerController : MonoBehaviour
         HealthBarUI.value = currentHealth;
         EnergyCoreUI.enabled = false;
         animator = GetComponent<Animator>();
+
+        Portal.Stop();
     }
 
     
@@ -211,11 +214,22 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Catnip"))
         {
             CatnipItem = CatnipItem = 1;
+            Portal.Play();
         }
 
         if (other.gameObject.CompareTag("Portal"))
         {
             SceneManager.LoadScene("MarsLevel");
+        }
+
+        if (other.gameObject.CompareTag("Portal2"))
+        {
+            SceneManager.LoadScene("HubLevel");
+        }
+
+        if (other.gameObject.CompareTag("DeathZone"))
+        {
+            SceneManager.LoadScene("DeathScreen");
         }
     }
     void handleAnimation()

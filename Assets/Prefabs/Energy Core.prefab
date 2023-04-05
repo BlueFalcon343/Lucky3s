@@ -34,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 5726562723854618906}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8653559752544765119
 MeshFilter:
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73c1aa7ecc3715d4f98ff69e238b6b5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +112,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyCore: {fileID: 8300000, guid: 5d5d1616e0701b64591d029f6108f3f5, type: 3}
+--- !u!1001 &944396706673292167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 5726562723854618906}
+    m_Modifications:
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01564312
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.030000687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.029598385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704413514330394653, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+      propertyPath: m_Name
+      value: Glow2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+--- !u!4 &4500102888111907739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3704413514330394652, guid: 61756bc2ec578884aacf8002014d76f2, type: 3}
+  m_PrefabInstance: {fileID: 944396706673292167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8653559753274472107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,7 +249,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3994491434099255217, guid: 97e6ee6bd83697947819182df3a3bb2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4500102888111907739}
   m_SourcePrefab: {fileID: 100100000, guid: 97e6ee6bd83697947819182df3a3bb2e, type: 3}
 --- !u!4 &5726562723854618906 stripped
 Transform:
