@@ -84,10 +84,12 @@ public class PlayerController : MonoBehaviour
     
     void FixedUpdate()
     {
-        movement = (movementY * FindObjectOfType<CameraController>()._orientation.forward) + (movementX * FindObjectOfType<CameraController>()._orientation.right);
-        rb.AddForce(movement.normalized * MOVESPEED, ForceMode.Force);
-        movement = Vector3.zero;
-
+        if (!PauseMenu.GameIsPaused)
+        {
+            movement = (movementY * FindObjectOfType<CameraController>()._orientation.forward) + (movementX * FindObjectOfType<CameraController>()._orientation.right);
+            rb.AddForce(movement.normalized * MOVESPEED, ForceMode.Force);
+            movement = Vector3.zero;
+        }
         //Set Force and Refuel Boost Jumps
         if(grounded == true)
         {
@@ -130,9 +132,12 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue movementValue)
     {
-        movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x;
-        movementY = movementVector.y;
+        if (!PauseMenu.GameIsPaused)
+        {
+            movementVector = movementValue.Get<Vector2>();
+            movementX = movementVector.x;
+            movementY = movementVector.y;
+        }
     }
 
     void OnLook(InputValue rotationValue)
@@ -165,12 +170,15 @@ public class PlayerController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         HealthBarUI.value = currentHealth;
         Debug.Log(currentHealth + "/" + maxHealth);
+        if(currentHealth <= 0)
+            SceneManager.LoadScene("DeathScreen");
     }
 
     // Ray and Freeze Ray
     public void OnFire()
     {
-        if (gunheat <= 0)
+
+        if (gunheat <= 0 && !PauseMenu.GameIsPaused)
         {
             PlayerProjectile.tag = "Fire";
             waterSource.Play();
@@ -182,7 +190,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAltFire()
     {
-        if (coreAmmo == 1)
+        if (coreAmmo == 1 && !PauseMenu.GameIsPaused)
         {
             PlayerProjectile.tag = "AltFire";
             freezeSource.Play();
