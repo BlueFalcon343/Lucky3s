@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4033045181748334650
+--- !u!1 &2412097709560057036
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4373999732637665920}
-  - component: {fileID: 800596198993593637}
-  - component: {fileID: 3240548056270795247}
-  - component: {fileID: 6600765093868390851}
-  - component: {fileID: 8524763217081077612}
-  - component: {fileID: 6520122269222528757}
-  - component: {fileID: 2558239711113563653}
+  - component: {fileID: 3040684816064058998}
+  - component: {fileID: 2133990645740804563}
+  - component: {fileID: 4213542302917061913}
+  - component: {fileID: 3294409273424610540}
+  - component: {fileID: 3294409273424610542}
+  - component: {fileID: 3294409273424610541}
+  - component: {fileID: 3294409273424610539}
   m_Layer: 10
-  m_Name: Ranged_Cat
+  m_Name: AnimatedCat(NotFunctional)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4373999732637665920
+--- !u!4 &3040684816064058998
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 274.27, y: 28.36, z: 289.2}
-  m_LocalScale: {x: 32.248444, y: 32.248444, z: 32.248444}
+  m_GameObject: {fileID: 2412097709560057036}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 287.73, y: 24.61, z: 106.91}
+  m_LocalScale: {x: 35.000324, y: 35.000324, z: 35.000324}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &800596198993593637
+--- !u!33 &2133990645740804563
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
-  m_Mesh: {fileID: 8421744311104621043, guid: 676bef3e98d54e84cbabeb9f62ee1faf, type: 3}
---- !u!23 &3240548056270795247
+  m_GameObject: {fileID: 2412097709560057036}
+  m_Mesh: {fileID: -7434549690534084444, guid: 8b0cb8c0b95820d4390c322ff8e13bfe, type: 3}
+--- !u!23 &4213542302917061913
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
+  m_GameObject: {fileID: 2412097709560057036}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4125471728267972529, guid: 3a417ae0a2ebe4e4588f7d6218385641, type: 3}
+  - {fileID: -4125471728267972529, guid: 8b0cb8c0b95820d4390c322ff8e13bfe, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,31 +87,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6600765093868390851
+--- !u!65 &3294409273424610540
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
+  m_GameObject: {fileID: 2412097709560057036}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019711137, y: 0.09463269, z: 0.017635398}
-  m_Center: {x: -0.06891691, y: 0, z: 0.005274772}
---- !u!82 &8524763217081077612
+  m_Size: {x: 0.031916734, y: 0.094632715, z: 0.021775834}
+  m_Center: {x: 0.0012036876, y: 0.04726065, z: 0.0061198077}
+--- !u!82 &3294409273424610542
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
+  m_GameObject: {fileID: 2412097709560057036}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d5d1616e0701b64591d029f6108f3f5, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -121,7 +121,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15.976654
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -196,41 +196,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!195 &6520122269222528757
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.019623779
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.09463269
-  m_BaseOffset: 0.047316346
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &2558239711113563653
+--- !u!114 &3294409273424610541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033045181748334650}
+  m_GameObject: {fileID: 2412097709560057036}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbd838eb169c445418b9fa7fad73dd01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6520122269222528757}
+  agent: {fileID: 3294409273424610539}
   player: {fileID: 7688997012912845061, guid: 467c619d83355f84daea59ae70ef0ad1, type: 3}
   whatIsGround:
     serializedVersion: 2
@@ -238,7 +216,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  freezeImpact: {fileID: 8524763217081077612}
+  freezeImpact: {fileID: 3294409273424610542}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   sightRange: 15
@@ -247,4 +225,26 @@ MonoBehaviour:
   playerInAttackRange: 0
   timeBetweenAttacks: 5
   projectile: {fileID: 2452044828945934213, guid: 3547386551f21d44b8a726d24405dbbd, type: 3}
-  EnemyRanged: {fileID: 4033045181748334650}
+  EnemyRanged: {fileID: 2412097709560057036}
+--- !u!195 &3294409273424610539
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412097709560057036}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.049006708
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.189154
+  m_BaseOffset: 0.094577
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
