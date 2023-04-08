@@ -8,6 +8,15 @@ TagManager:
   - AltFire
   - Alive
   - Dead
+  - DeathZone
+  - EnergyCore
+  - Portal
+  - Catnip
+  - PortalToHub
+  - PortalToTutorial
+  - PortalToMars
+  - PortalToJupiter
+  - PortalToCaturn
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
     }
 
@@ -30,6 +30,20 @@ public class CameraController : MonoBehaviour
         if(moveDirection != Vector3.zero)
         {
             _playerBody.forward = Vector3.Slerp(_playerBody.forward, moveDirection.normalized, Time.deltaTime * ROTATESPEED);
+        }
+    }
+
+    public void ToggleCursor()
+    {
+        if (Cursor.visible)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

@@ -17,6 +17,10 @@ public class MainMenu : MonoBehaviour
 
     }
     
+    void Update()
+    {
+
+    }
 
     public void PlayGame()
     {
@@ -50,6 +54,41 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(true);
         controls.SetActive(false);
         screen = 0;
+    }
+
+    public void OnY()
+    {
+        if (screen == 0)
+        {
+            screen = 3;
+            PlayGame();
+        }
+    }
+    public void OnX()
+    {
+        if (screen == 0)
+        {
+            OnCredits();
+        }
+    }
+    public void OnA()
+    {
+        if (screen == 0)
+        {
+            QuitGame();
+        }
+    }
+    public void OnB()
+    {
+        if (screen == 0)
+        {
+            OnControls();
+        }
+        else if (screen == 1)
+        {
+            OffCredits();
+            OffControls();
+        }
     }
 
     void Check()

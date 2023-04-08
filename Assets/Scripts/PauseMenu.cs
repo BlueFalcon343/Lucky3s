@@ -15,10 +15,12 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
+                FindObjectOfType<CameraController>().ToggleCursor();
             }
             else
             {
                 Pause();
+                FindObjectOfType<CameraController>().ToggleCursor();
             }
         }
     }
@@ -42,4 +44,5 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
 }

@@ -174,7 +174,10 @@ public class PlayerController : MonoBehaviour
         HealthBarUI.value = currentHealth;
         Debug.Log(currentHealth + "/" + maxHealth);
         if(currentHealth <= 0)
+        {
             SceneManager.LoadScene("DeathScreen");
+            FindObjectOfType<CameraController>().ToggleCursor();
+        }
     }
 
     // Ray and Freeze Ray
@@ -203,6 +206,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnA()
+    {
+        if (PauseMenu.GameIsPaused)
+        {
+            FindObjectOfType<PauseMenu>().Resume();
+        }
+    }
+    public void OnB()
+    {
+        if (PauseMenu.GameIsPaused)
+        {
+            FindObjectOfType<PauseMenu>().QuitGame();
+        }
+    }
+
     // Item Collection and Portals
     void OnTriggerEnter(Collider other)
     {
@@ -217,19 +235,31 @@ public class PlayerController : MonoBehaviour
             Portal.Play();
         }
 
-        if (other.gameObject.CompareTag("Portal"))
+        if (other.gameObject.CompareTag("PortalToHub"))
+        {
+            SceneManager.LoadScene("HubLevel");
+        }
+        if (other.gameObject.CompareTag("PortalToTutorial"))
+        {
+            SceneManager.LoadScene("TutorialLevel");
+        }
+        if (other.gameObject.CompareTag("PortalToMars"))
         {
             SceneManager.LoadScene("MarsLevel");
         }
-
-        if (other.gameObject.CompareTag("Portal2"))
+        if (other.gameObject.CompareTag("PortalToJupiter"))
         {
-            SceneManager.LoadScene("HubLevel");
+            SceneManager.LoadScene("JupiterLevel");
+        }
+        if (other.gameObject.CompareTag("PortalToCaturn"))
+        {
+            SceneManager.LoadScene("CaturnLevel");
         }
 
         if (other.gameObject.CompareTag("DeathZone"))
         {
             SceneManager.LoadScene("DeathScreen");
+            FindObjectOfType<CameraController>().ToggleCursor();
         }
     }
     void handleAnimation()
