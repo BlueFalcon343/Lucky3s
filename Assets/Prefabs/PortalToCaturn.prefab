@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 7352373011956303290}
   m_Layer: 6
   m_Name: PortalToCaturn
-  m_TagString: Untagged
+  m_TagString: PortalToCaturn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

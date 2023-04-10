@@ -4872,7 +4872,7 @@ GameObject:
   - component: {fileID: 7313473892124531434}
   m_Layer: 6
   m_Name: PortalToHub
-  m_TagString: Untagged
+  m_TagString: PortalToHub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

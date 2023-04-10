@@ -9686,7 +9686,7 @@ GameObject:
   - component: {fileID: 3443279109631796280}
   m_Layer: 6
   m_Name: PortalToTutorial
-  m_TagString: Untagged
+  m_TagString: PortalToTutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

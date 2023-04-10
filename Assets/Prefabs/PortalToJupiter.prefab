@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 7394353974056617652}
   m_Layer: 6
   m_Name: PortalToJupiter
-  m_TagString: Untagged
+  m_TagString: PortalToJupiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
