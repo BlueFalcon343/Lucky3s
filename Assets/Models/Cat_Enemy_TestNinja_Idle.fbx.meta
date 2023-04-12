@@ -1,34 +1,12 @@
 fileFormatVersion: 2
-guid: 676bef3e98d54e84cbabeb9f62ee1faf
+guid: 4db8cb98a70939f4d85be47f0fefe7b1
 ModelImporter:
   serializedVersion: 22103
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aiStandardSurface3
-    second: {fileID: 2100000, guid: 1f6f24457f428e340996ef46492b1544, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Cat_Enemy_Untextured_01_aiStandardSurface1_BaseColor
-    second: {fileID: 2800000, guid: 051136762899eb8438ab7a998d8a03fb, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Cat_Enemy_Untextured_01_aiStandardSurface1_Metallic
-    second: {fileID: 2800000, guid: 81966f65a6be76e4e8a52178922b8aaa, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Cat_Enemy_Untextured_01_aiStandardSurface1_Normal
-    second: {fileID: 2800000, guid: 05975804e38cf394c94be3b6e11ff137, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Cat_Enemy_Untextured_01_aiStandardSurface1_Roughness
-    second: {fileID: 2800000, guid: 82b93ce071a3ef54699ac15ca9cc33f2, type: 3}
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

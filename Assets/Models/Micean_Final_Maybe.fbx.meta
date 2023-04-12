@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 3a417ae0a2ebe4e4588f7d6218385641
+guid: c396c77db826f394d92fdf9f09f26619
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface1
+    second: {fileID: 2100000, guid: 9215e5ef4f321a64f88fb13faba7a01c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Micean_Untexed_standardSurface1_BaseColor
+    second: {fileID: 2800000, guid: b4d60ee0bd849224d984d6148d01a353, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Micean_Untexed_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: c075d9c3b962fd1439daad691cbef583, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Micean_Untexed_standardSurface1_Normal
+    second: {fileID: 2800000, guid: 26d3b64c94f987549b2ab0188be03a6c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Micean_Untexed_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 2f69cf3eea7d3984abc26eadc671739c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,7 +60,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 15
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -89,7 +114,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.14999999
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
