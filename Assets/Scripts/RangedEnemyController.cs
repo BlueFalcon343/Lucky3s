@@ -7,7 +7,8 @@ public class RangedEnemyController : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public Transform player;
+    //public Transform player;
+    //public Transform MiceanThrowable;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -33,7 +34,7 @@ public class RangedEnemyController : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        //player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         EnemyRanged.tag = "Alive";
     }
@@ -76,7 +77,8 @@ public class RangedEnemyController : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        agent.SetDestination(player.position);
+        //agent.SetDestination(player.position);
+        agent.SetDestination(GameObject.Find("Player").transform.position);
     }
 
     private void AttackPlayer()
@@ -84,14 +86,13 @@ public class RangedEnemyController : MonoBehaviour
         //Stop Enemy Movement
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
             //Attack code here
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 6f, ForceMode.Impulse);
             //End of Attack code
 
             // Starts break between attacks

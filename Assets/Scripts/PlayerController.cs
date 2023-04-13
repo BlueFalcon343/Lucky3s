@@ -23,12 +23,15 @@ public class PlayerController : MonoBehaviour
 
 
 
-    [Header("UI")]
+    [Header("UI and Micean Throwable")]
     public Slider HealthBarUI;
     public Slider JumpBoostUI;
     public Image EnergyCoreUI;
     public Image CatnipUI;
     public int CatnipItem;
+    public Image MiceanUI;
+    public int Micean;
+    public GameObject MiceanThrowable;
 
 
     // health variables
@@ -51,16 +54,17 @@ public class PlayerController : MonoBehaviour
     bool grounded;
 
     //Gun firing location and usage
-    [Header("Gun Point, Ammo, Audio")]
+    [Header("Weapons")]
     float gunheat;
     const float fireRate = 0.9f;
     public int coreAmmo = 0;
     public AudioSource waterSource;
     public AudioSource freezeSource;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject PlayerProjectile;
+    public Transform firePoint;
+    public GameObject PlayerProjectile;
 
     //Particles
+    [Header("Particles")]
     public ParticleSystem WaterGun;
     public ParticleSystem FreezeGun;
     public ParticleSystem BootFlame;
@@ -80,6 +84,7 @@ public class PlayerController : MonoBehaviour
         JumpBoostUI.value = jumpBoost;
         HealthBarUI.value = currentHealth;
         EnergyCoreUI.enabled = false;
+        MiceanUI.enabled = false;
         animator = GetComponent<Animator>();
 
         Portal.Stop();
@@ -109,7 +114,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {       
         //Ground Check Raycast 
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 1.5f, WhatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, WhatIsGround);
 
         // Fire Rate
         if (gunheat > 0) gunheat -= Time.deltaTime;
@@ -131,6 +136,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             CatnipUI.enabled = false;
+        }
+
+        if (Micean >= 1)
+        {
+            MiceanUI.enabled = true;
+        }
+        else
+        {
+            MiceanUI.enabled = false;
         }
     }
 
@@ -207,6 +221,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    IEnumerator OnThrowable()
+    {
+        if (Micean == 1 && !PauseMenu.GameIsPaused)
+        {
+            gameObject.name = "Player1";
+            Instantiate(MiceanThrowable, firePoint.position, firePoint.rotation);
+            Micean = Micean - 1;
+            yield return new WaitForSeconds(10f);
+            gameObject.name = "Player";
+        }
+    }
+
     public void OnA()
     {
         if (PauseMenu.GameIsPaused)
@@ -233,6 +259,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Catnip"))
         {
             CatnipItem = CatnipItem = 1;
+            Portal.Play();
+        }
+
+        if (other.gameObject.CompareTag("Micean"))
+        {
+            Micean = Micean + 1;
             Portal.Play();
         }
 

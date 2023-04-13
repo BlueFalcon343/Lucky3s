@@ -73,6 +73,15 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Throwable"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a23b961-4ecf-419e-a1a7-46b9fb15d6b3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Y"",
                     ""type"": ""Button"",
                     ""id"": ""26883967-3616-41dc-a28d-9810db3fe057"",
@@ -349,6 +358,28 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""B"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27b8e23e-5fb7-4a4d-b035-f431bdd97903"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throwable"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f413a0c-e924-4da2-8a80-4e585a54f23a"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Throwable"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -941,6 +972,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_AltFire = m_Player.FindAction("Alt Fire", throwIfNotFound: true);
+        m_Player_Throwable = m_Player.FindAction("Throwable", throwIfNotFound: true);
         m_Player_Y = m_Player.FindAction("Y", throwIfNotFound: true);
         m_Player_X = m_Player.FindAction("X", throwIfNotFound: true);
         m_Player_A = m_Player.FindAction("A", throwIfNotFound: true);
@@ -1021,6 +1053,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_AltFire;
+    private readonly InputAction m_Player_Throwable;
     private readonly InputAction m_Player_Y;
     private readonly InputAction m_Player_X;
     private readonly InputAction m_Player_A;
@@ -1034,6 +1067,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @AltFire => m_Wrapper.m_Player_AltFire;
+        public InputAction @Throwable => m_Wrapper.m_Player_Throwable;
         public InputAction @Y => m_Wrapper.m_Player_Y;
         public InputAction @X => m_Wrapper.m_Player_X;
         public InputAction @A => m_Wrapper.m_Player_A;
@@ -1062,6 +1096,9 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                 @AltFire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAltFire;
                 @AltFire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAltFire;
                 @AltFire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAltFire;
+                @Throwable.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowable;
+                @Throwable.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowable;
+                @Throwable.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowable;
                 @Y.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnY;
                 @Y.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnY;
                 @Y.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnY;
@@ -1093,6 +1130,9 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                 @AltFire.started += instance.OnAltFire;
                 @AltFire.performed += instance.OnAltFire;
                 @AltFire.canceled += instance.OnAltFire;
+                @Throwable.started += instance.OnThrowable;
+                @Throwable.performed += instance.OnThrowable;
+                @Throwable.canceled += instance.OnThrowable;
                 @Y.started += instance.OnY;
                 @Y.performed += instance.OnY;
                 @Y.canceled += instance.OnY;
@@ -1266,6 +1306,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnAltFire(InputAction.CallbackContext context);
+        void OnThrowable(InputAction.CallbackContext context);
         void OnY(InputAction.CallbackContext context);
         void OnX(InputAction.CallbackContext context);
         void OnA(InputAction.CallbackContext context);

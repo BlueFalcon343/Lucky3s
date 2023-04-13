@@ -42,7 +42,7 @@ Transform:
   - {fileID: 660554707408381828}
   - {fileID: 660554706953315091}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6359177953876153880
 Animator:
@@ -91,8 +91,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02151715, y: 0.082735464, z: 0.018219145}
-  m_Center: {x: 0.00091299, y: 0.04170706, z: 0.00013296299}
+  m_Size: {x: 0.02151715, y: 0.08212594, z: 0.018219145}
+  m_Center: {x: 0.00091299, y: 0.042011824, z: 0.000132963}
 --- !u!82 &660554708195827274
 AudioSource:
   m_ObjectHideFlags: 0
@@ -308,6 +308,9 @@ MonoBehaviour:
   EnergyCoreUI: {fileID: 0}
   CatnipUI: {fileID: 0}
   CatnipItem: 0
+  MiceanUI: {fileID: 0}
+  Micean: 0
+  MiceanThrowable: {fileID: 333545653354875014, guid: 625f3fe65c4d067429b7eec926e878df, type: 3}
   maxHealth: 10
   jumpBoost: 5
   jumpforce: 10

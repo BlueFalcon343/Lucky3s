@@ -7,7 +7,8 @@ public class EnemyController : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public Transform player;
+    //public Transform player;
+    //public Transform MiceanThrowable;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -32,7 +33,7 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        //player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         Enemy.tag = "Alive";
     }
@@ -73,7 +74,8 @@ public class EnemyController : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        agent.SetDestination(player.position);
+        //agent.SetDestination(player.position);
+        agent.SetDestination(GameObject.Find("Player").transform.position);
     }
 
     private void OnCollisionStay(Collision other)
