@@ -328,7 +328,21 @@ MonoBehaviour:
   WaterGun: {fileID: 5533833143421024069, guid: 8b57442cc70948447b7c2c20b65db1b1, type: 3}
   FreezeGun: {fileID: 2950494479759573750, guid: b9acd5cfc45651d4594dd0fab0ecaab5, type: 3}
   BootFlame: {fileID: 5118425679205371552, guid: 975271fc6aa197045b0d45f3d8dd44f7, type: 3}
-  Portal: {fileID: 0}
+  NPC1:
+    serializedVersion: 2
+    m_Bits: 2048
+  NPC2:
+    serializedVersion: 2
+    m_Bits: 4096
+  NPC3:
+    serializedVersion: 2
+    m_Bits: 8192
+  NPC4:
+    serializedVersion: 2
+    m_Bits: 16384
+  NPC5:
+    serializedVersion: 2
+    m_Bits: 32768
 --- !u!114 &660554708195827273
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ TagManager:
   - PortalToMars
   - PortalToJupiter
   - PortalToCaturn
+  - Micean
   layers:
   - Default
   - TransparentFX
@@ -29,11 +30,11 @@ TagManager:
   - EnemyProjectile
   - PlayerProjectile
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NPC1
+  - NPC2
+  - NPC3
+  - NPC4
+  - NPC5
   - 
   - 
   - 

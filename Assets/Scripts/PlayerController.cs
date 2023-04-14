@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     // movement systems
+    [Header("Movement")]
     private Rigidbody rb;
     public float MOVESPEED = 1f;
     public float movementX;
@@ -68,7 +69,23 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem WaterGun;
     public ParticleSystem FreezeGun;
     public ParticleSystem BootFlame;
-    public ParticleSystem Portal;
+
+    //Dialogue
+    [Header("Dialogue")]
+    bool talk1;
+    bool talk2;
+    bool talk3;
+    bool talk4;
+    bool talk5;
+    public LayerMask NPC1;
+    public LayerMask NPC2;
+    public LayerMask NPC3;
+    public LayerMask NPC4;
+    public LayerMask NPC5;
+
+    //Scenes
+    int sceneTracker = 0;
+    /* 0 is hub, 1 is tutorial, 2 is mars, 3 is jupiter, 4 is caturn(space), 5 is caturn(cave) */
 
 
     // Start is called before the first frame update
@@ -87,7 +104,6 @@ public class PlayerController : MonoBehaviour
         MiceanUI.enabled = false;
         animator = GetComponent<Animator>();
 
-        Portal.Stop();
     }
 
     
@@ -103,12 +119,25 @@ public class PlayerController : MonoBehaviour
         if(grounded == true)
         {
             jumpforce = 12f;
+            MOVESPEED = 50f;
         }
+        /*
+        while (grounded == true)
+        {
+            MOVESPEED = 50f;
+        }
+        while (grounded != true)
+        {
+            MOVESPEED = 20f;
+        }
+        */
         while (grounded == true && jumpBoost <= 4)
         {
                jumpBoost = jumpBoost + 1;
                JumpBoostUI.value = jumpBoost;
         }
+
+        ToggleDialogue();
     }
 
     void Update()
@@ -198,7 +227,6 @@ public class PlayerController : MonoBehaviour
     // Ray and Freeze Ray
     public void OnFire()
     {
-
         if (gunheat <= 0 && !PauseMenu.GameIsPaused)
         {
             PlayerProjectile.tag = "Fire";
@@ -207,6 +235,12 @@ public class PlayerController : MonoBehaviour
             Instantiate(WaterGun, firePoint.position, firePoint.rotation);
             gunheat = fireRate;
         }
+        
+        talk1 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC1);
+        talk2 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC2);
+        talk3 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC3);
+        talk4 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC4);
+        talk5 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC5);
     }
 
     public void OnAltFire()
@@ -259,35 +293,44 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Catnip"))
         {
             CatnipItem = CatnipItem = 1;
-            Portal.Play();
         }
 
         if (other.gameObject.CompareTag("Micean"))
         {
             Micean = Micean + 1;
-            Portal.Play();
         }
 
         if (other.gameObject.CompareTag("PortalToHub"))
         {
             SceneManager.LoadScene("HubLevel");
+            sceneTracker = 0;
         }
         if (other.gameObject.CompareTag("PortalToTutorial"))
         {
             SceneManager.LoadScene("TutorialLevel");
+            sceneTracker = 1;
         }
         if (other.gameObject.CompareTag("PortalToMars"))
         {
             SceneManager.LoadScene("MarsLevel");
+            sceneTracker = 2;
         }
         if (other.gameObject.CompareTag("PortalToJupiter"))
         {
             SceneManager.LoadScene("JupiterLevel");
+            sceneTracker = 3;
         }
         if (other.gameObject.CompareTag("PortalToCaturn"))
         {
             SceneManager.LoadScene("CaturnLevel");
+            sceneTracker = 4;
         }
+        if (other.gameObject.CompareTag("PortalInToCaturn"))
+        {
+            SceneManager.LoadScene("CaturnCaveLevel");
+            sceneTracker = 5;
+        }
+
 
         if (other.gameObject.CompareTag("DeathZone"))
         {
@@ -295,6 +338,7 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<CameraController>().ToggleCursor();
         }
     }
+
     void handleAnimation()
     {
         bool isWalking = animator.GetBool("isWalking");
@@ -310,6 +354,34 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("NotWalking");
             animator.SetBool("isWalking", false);
+        }
+    }
+
+    void ToggleDialogue()
+    {
+        if (talk1)
+        {
+            FindObjectOfType<NPCCatController>().DisplayDialogue(1);
+        }
+        else if (talk2)
+        {
+            FindObjectOfType<NPCCatController>().DisplayDialogue(2);
+        }
+        else if (talk3)
+        {
+            FindObjectOfType<NPCCatController>().DisplayDialogue(3);
+        }
+        else if (talk4)
+        {
+            FindObjectOfType<NPCCatController>().DisplayDialogue(4);
+        }
+        else if (talk5)
+        {
+            FindObjectOfType<NPCCatController>().DisplayDialogue(5);
+        }
+        else
+        {
+            FindObjectOfType<NPCCatController>().RemoveDialogue();
         }
     }
 }

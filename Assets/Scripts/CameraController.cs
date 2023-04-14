@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
 
     public float rotationPower = 1.5f;
     public float rotationLerp = 0.5f;
+    public Vector3 lookDirection;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        Vector3 lookDirection = _player.position - new Vector3(transform.position.x, _player.position.y, transform.position.z);
+        lookDirection = _player.position - new Vector3(transform.position.x, _player.position.y, transform.position.z);
         _orientation.forward = lookDirection.normalized;
         Vector3 moveDirection = _orientation.forward * FindObjectOfType<PlayerController>().movementY + _orientation.right * FindObjectOfType<PlayerController>().movementX;
 
