@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
                JumpBoostUI.value = jumpBoost;
         }
 
-        ToggleDialogue();
+        //ToggleDialogue();
     }
 
     void Update()
@@ -336,24 +336,6 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("DeathScreen");
             FindObjectOfType<CameraController>().ToggleCursor();
-        }
-    }
-
-    void handleAnimation()
-    {
-        bool isWalking = animator.GetBool("isWalking");
-        bool isRunning = animator.GetBool("isRunning");
-
-        if((movement.x > 0f || movement.y > 0f) && !isWalking)
-        {
-            Debug.Log("Walking");
-            animator.SetBool("isWalking", true);
-        }
-
-        else if((movement.x == 0f || movement.y == 0f) && isWalking)
-        {
-            Debug.Log("NotWalking");
-            animator.SetBool("isWalking", false);
         }
     }
 

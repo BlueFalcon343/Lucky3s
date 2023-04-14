@@ -12,6 +12,9 @@ public class RangedEnemyController : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    //animator
+    Animator animator;
+
     //Audio
     public AudioSource freezeImpact;
 
@@ -25,6 +28,8 @@ public class RangedEnemyController : MonoBehaviour
     public bool playerInSightRange, playerInAttackRange;
 
     //Attacking
+    public Transform target;
+    public Transform shotPoint;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject projectile;
@@ -35,6 +40,7 @@ public class RangedEnemyController : MonoBehaviour
     private void Awake()
     {
         //player = GameObject.Find("Player").transform;
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         EnemyRanged.tag = "Alive";
     }
@@ -52,6 +58,7 @@ public class RangedEnemyController : MonoBehaviour
 
     private void Patroling()
     {
+        animator.SetBool("isWalking", true);
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
@@ -77,20 +84,25 @@ public class RangedEnemyController : MonoBehaviour
     }
     private void ChasePlayer()
     {
+        animator.SetBool("isWalking", true);
         //agent.SetDestination(player.position);
         agent.SetDestination(GameObject.Find("Player").transform.position);
     }
 
     private void AttackPlayer()
     {
+
         //Stop Enemy Movement
         agent.SetDestination(transform.position);
+        animator.SetBool("isWalking", false);
+
 
 
         if (!alreadyAttacked)
         {
             //Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            transform.LookAt(target);
+            Rigidbody rb = Instantiate(projectile, shotPoint.position, shotPoint.rotation).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 6f, ForceMode.Impulse);
             //End of Attack code

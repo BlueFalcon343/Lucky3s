@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 660554708195827275}
   - component: {fileID: 660554708195827272}
   - component: {fileID: 660554708195827273}
+  - component: {fileID: 2843596889061267314}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -42,7 +43,7 @@ Transform:
   - {fileID: 660554707408381828}
   - {fileID: 660554706953315091}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6359177953876153880
 Animator:
@@ -78,7 +79,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &660554708195827284
 BoxCollider:
@@ -104,7 +105,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 470f7352156a1be4abd1c224ff420af6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -200,7 +201,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d812aa2f13c38fd42ae32087f53455f9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -373,6 +374,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2843596889061267314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426622400105617112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd51e4b7af7d0745b2ad55782f328bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &445789968819090819
 GameObject:
   m_ObjectHideFlags: 0

@@ -658,7 +658,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d5d1616e0701b64591d029f6108f3f5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -778,7 +778,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 3414002163878595545}
-  player: {fileID: 1053976988369636450, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

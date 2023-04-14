@@ -12,6 +12,9 @@ public class EnemyController : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    //animator
+    Animator animator;
+
     //Audio
     public AudioSource freezeHit;
 
@@ -34,6 +37,7 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         //player = GameObject.Find("Player").transform;
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         Enemy.tag = "Alive";
     }
@@ -49,6 +53,7 @@ public class EnemyController : MonoBehaviour
 
     private void Patroling()
     {
+        animator.SetBool("isWalking", true);
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
@@ -84,7 +89,7 @@ public class EnemyController : MonoBehaviour
         {
             //Attack code here
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
-
+            animator.SetBool("isAttacking", true);
             if (player != null)
             {
                 player.ChangeHealth(-1);
@@ -100,6 +105,7 @@ public class EnemyController : MonoBehaviour
     // Ends break between attacks
     private void ResetAttack()
     {
+        animator.SetBool("isAttacking", false);
         alreadyAttacked = false;
     }
 
