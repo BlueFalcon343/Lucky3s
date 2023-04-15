@@ -988,7 +988,7 @@ Transform:
   - {fileID: 7019564067678136006}
   - {fileID: 5676195374573778493}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &298238198065442141
 Animator:
@@ -1167,7 +1167,6 @@ MonoBehaviour:
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
-  target: {fileID: 1053976988369636450, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
   shotPoint: {fileID: 5676195374573778493}
   timeBetweenAttacks: 5
   projectile: {fileID: 2452044828945934213, guid: 3547386551f21d44b8a726d24405dbbd, type: 3}

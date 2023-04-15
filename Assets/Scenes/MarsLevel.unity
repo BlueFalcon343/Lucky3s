@@ -3242,11 +3242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!198 &1487333761 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7313473892124531435, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
-  m_PrefabInstance: {fileID: 1668992396}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1503654882
 GameObject:
   m_ObjectHideFlags: 3
@@ -3316,7 +3311,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503654882}
-  m_LocalRotation: {x: -0.018141456, y: -0, z: -0, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141458, y: -0, z: -0.0000000018626451, w: 0.9998355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4390,6 +4385,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a60b2b7fdfb7a3478ac122fbe150776, type: 3}
+--- !u!114 &1985239422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 597125400, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+  m_PrefabInstance: {fileID: 2310272268951288319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1987545998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5200,10 +5206,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
-      propertyPath: Portal
-      value: 
-      objectReference: {fileID: 1487333761}
-    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: CatnipUI
       value: 
       objectReference: {fileID: 662552261}
@@ -5211,6 +5213,10 @@ PrefabInstance:
       propertyPath: MiceanUI
       value: 
       objectReference: {fileID: 1996192018}
+    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+      propertyPath: YarnballUI
+      value: 
+      objectReference: {fileID: 1985239422}
     - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: HealthBarUI
       value: 
@@ -5223,10 +5229,6 @@ PrefabInstance:
       propertyPath: EnergyCoreUI
       value: 
       objectReference: {fileID: 756921496}
-    - target: {fileID: 660554708195827285, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 1053976988369636450, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5394,6 +5396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6187579127227709593, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6187579127227709597, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5485,6 +5491,30 @@ PrefabInstance:
     - target: {fileID: 6187579127392128871, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187579127423283846, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187579127423283846, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187579127423283846, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187579127443895164, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187579127443895164, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187579127443895164, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

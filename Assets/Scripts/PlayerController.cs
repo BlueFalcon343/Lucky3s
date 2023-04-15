@@ -22,15 +22,22 @@ public class PlayerController : MonoBehaviour
     //animator
     Animator animator;
 
+    [Header("Tag Change")]
+    public GameObject Player;
 
 
     [Header("UI and Micean Throwable")]
     public Slider HealthBarUI;
     public Slider JumpBoostUI;
     public Image EnergyCoreUI;
+
     public Image CatnipUI;
     public int CatnipItem;
+
+    public Image YarnballUI;
+    public int YarnballItem;
     public Image MiceanUI;
+
     public int Micean;
     public GameObject MiceanThrowable;
 
@@ -100,13 +107,13 @@ public class PlayerController : MonoBehaviour
         //Setting UI
         JumpBoostUI.value = jumpBoost;
         HealthBarUI.value = currentHealth;
-        EnergyCoreUI.enabled = false;
-        MiceanUI.enabled = false;
+        //EnergyCoreUI.enabled = false;
+        //MiceanUI.enabled = false;
+        //YarnballUI.enabled = false;
         animator = GetComponent<Animator>();
 
     }
 
-    
     void FixedUpdate()
     {
         if (!PauseMenu.GameIsPaused)
@@ -164,6 +171,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             MiceanUI.enabled = false;
+        }
+
+        if (YarnballItem == 1)
+        {
+            YarnballUI.enabled = true;
+        }
+        else
+        {
+            YarnballUI.enabled = false;
         }
 
         if (grounded == true || jumpBoost >= 5)
@@ -256,13 +272,16 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator OnThrowable()
     {
-        if (Micean == 1 && !PauseMenu.GameIsPaused)
+        if (Micean >= 1 && !PauseMenu.GameIsPaused)
         {
             gameObject.name = "Player1";
+            Player.tag = "Player1";
             Instantiate(MiceanThrowable, firePoint.position, firePoint.rotation);
             Micean = Micean - 1;
             yield return new WaitForSeconds(10f);
             gameObject.name = "Player";
+            Player.tag = "Player";
+
         }
     }
 
@@ -289,14 +308,24 @@ public class PlayerController : MonoBehaviour
             coreAmmo = coreAmmo = 1;
         }
 
+        if (other.gameObject.CompareTag("Micean"))
+        {
+            Micean = Micean + 1;
+        }
+
         if (other.gameObject.CompareTag("Catnip"))
         {
             CatnipItem = CatnipItem = 1;
         }
 
-        if (other.gameObject.CompareTag("Micean"))
+        if (other.gameObject.CompareTag("Catnip"))
         {
-            Micean = Micean + 1;
+            CatnipItem = CatnipItem = 1;
+        }
+
+        if (other.gameObject.CompareTag("Yarn"))
+        {
+            YarnballItem = YarnballItem = 1;
         }
 
         if (other.gameObject.CompareTag("PortalToHub"))

@@ -7,6 +7,9 @@ public class MiceanThrowable : MonoBehaviour
     public float speed = 0f;
     Vector3 startPosition;
 
+    public GameObject Micean;
+
+
     void Start()
     {
         startPosition = transform.position;
@@ -23,6 +26,7 @@ public class MiceanThrowable : MonoBehaviour
     IEnumerator Death()
     {
         gameObject.name = "Player";
+        Micean.tag = "Player";
         yield return new WaitForSeconds(10f);
         Destroy(gameObject);
     }

@@ -8,7 +8,6 @@ public class RangedEnemyController : MonoBehaviour
     public NavMeshAgent agent;
 
     //public Transform player;
-    //public Transform MiceanThrowable;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -28,7 +27,8 @@ public class RangedEnemyController : MonoBehaviour
     public bool playerInSightRange, playerInAttackRange;
 
     //Attacking
-    public Transform target;
+    //public Transform target;
+    private Transform target;
     public Transform shotPoint;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
@@ -47,6 +47,8 @@ public class RangedEnemyController : MonoBehaviour
 
     private void Update()
     {
+        target = GameObject.FindWithTag("Player").transform;
+
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -104,7 +106,7 @@ public class RangedEnemyController : MonoBehaviour
             transform.LookAt(target);
             Rigidbody rb = Instantiate(projectile, shotPoint.position, shotPoint.rotation).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 6f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 5f, ForceMode.Impulse);
             //End of Attack code
 
             // Starts break between attacks

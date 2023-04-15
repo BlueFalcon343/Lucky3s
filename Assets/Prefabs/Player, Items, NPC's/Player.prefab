@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 660554708195827284}
   - component: {fileID: 660554708195827274}
   - component: {fileID: 660554708195827275}
-  - component: {fileID: 660554708195827272}
   - component: {fileID: 660554708195827273}
+  - component: {fileID: 660554708195827272}
   - component: {fileID: 2843596889061267314}
   m_Layer: 7
   m_Name: Player
@@ -43,7 +43,7 @@ Transform:
   - {fileID: 660554707408381828}
   - {fileID: 660554706953315091}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6359177953876153880
 Animator:
@@ -286,6 +286,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &660554708195827273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426622400105617112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a0a5bc564e8cf044a8ebb1cfd9cde0a8, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &660554708195827272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,11 +334,14 @@ MonoBehaviour:
   rotationVector: {x: 0, y: 0}
   _orientation: {fileID: 0}
   _camera: {fileID: 0}
+  Player: {fileID: 426622400105617112}
   HealthBarUI: {fileID: 0}
   JumpBoostUI: {fileID: 0}
   EnergyCoreUI: {fileID: 0}
   CatnipUI: {fileID: 0}
   CatnipItem: 0
+  YarnballUI: {fileID: 0}
+  YarnballItem: 0
   MiceanUI: {fileID: 0}
   Micean: 0
   MiceanThrowable: {fileID: 333545653354875014, guid: 625f3fe65c4d067429b7eec926e878df, type: 3}
@@ -344,36 +377,6 @@ MonoBehaviour:
   NPC5:
     serializedVersion: 2
     m_Bits: 32768
---- !u!114 &660554708195827273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426622400105617112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: a0a5bc564e8cf044a8ebb1cfd9cde0a8, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &2843596889061267314
 MonoBehaviour:
   m_ObjectHideFlags: 0

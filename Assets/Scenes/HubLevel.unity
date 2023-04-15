@@ -1074,6 +1074,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+--- !u!114 &1159958189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 597125400, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+  m_PrefabInstance: {fileID: 1159958188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1159958190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2956913592719915624, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+  m_PrefabInstance: {fileID: 1159958188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1234931824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1053976988369636450, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
@@ -1095,6 +1117,14 @@ PrefabInstance:
       propertyPath: CatnipUI
       value: 
       objectReference: {fileID: 1459919894}
+    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+      propertyPath: MiceanUI
+      value: 
+      objectReference: {fileID: 1159958190}
+    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+      propertyPath: YarnballUI
+      value: 
+      objectReference: {fileID: 1159958189}
     - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: HealthBarUI
       value: 
@@ -1386,7 +1416,7 @@ GameObject:
   - component: {fileID: 1944740608}
   - component: {fileID: 1944740607}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1428,6 +1458,7 @@ MonoBehaviour:
   ROTATESPEED: 25
   rotationPower: 3
   rotationLerp: 0.5
+  lookDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &1944740609
 MonoBehaviour:
   m_ObjectHideFlags: 0

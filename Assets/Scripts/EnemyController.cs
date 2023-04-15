@@ -8,7 +8,6 @@ public class EnemyController : MonoBehaviour
     public NavMeshAgent agent;
 
     //public Transform player;
-    //public Transform MiceanThrowable;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
