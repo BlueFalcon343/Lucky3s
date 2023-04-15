@@ -6,7 +6,7 @@ public class GeyserBoost : MonoBehaviour
 {
     public float boostHeight;
     // Start is called before the first frame update
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

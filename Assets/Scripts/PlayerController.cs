@@ -119,18 +119,8 @@ public class PlayerController : MonoBehaviour
         if(grounded == true)
         {
             jumpforce = 12f;
-            MOVESPEED = 50f;
         }
-        /*
-        while (grounded == true)
-        {
-            MOVESPEED = 50f;
-        }
-        while (grounded != true)
-        {
-            MOVESPEED = 20f;
-        }
-        */
+        
         while (grounded == true && jumpBoost <= 4)
         {
                jumpBoost = jumpBoost + 1;
@@ -174,6 +164,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             MiceanUI.enabled = false;
+        }
+
+        if (grounded == true || jumpBoost >= 5)
+        {
+            MOVESPEED = 50f;
+        }
+        else
+        {
+            MOVESPEED = 30f;
         }
     }
 

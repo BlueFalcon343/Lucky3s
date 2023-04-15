@@ -27,12 +27,12 @@ Transform:
   m_GameObject: {fileID: 5929293696994770633}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 8.11, y: 2.650683, z: 3.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 21.068916, y: 21.068916, z: 21.068916}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6827961677538946501}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5929293696994770635
 ParticleSystem:
@@ -170,8 +170,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 7
-      minScalar: 5
+      scalar: 3
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -664,7 +664,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 6.53
+    angle: 2.05
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -4859,8 +4859,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 7.181324}
-  m_Center: {x: 0, y: -1.0169633e-14, z: 3.2843747}
+  m_Size: {x: 1.5, y: 1.5, z: 5.2375383}
+  m_Center: {x: 0, y: -2.153094e-14, z: 2.3124793}
 --- !u!114 &491854921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4873,4 +4873,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a8a237ebf7b624583524cde9b4d778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostHeight: 5000
+  boostHeight: 100
