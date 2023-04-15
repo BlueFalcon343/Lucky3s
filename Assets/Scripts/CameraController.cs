@@ -16,10 +16,26 @@ public class CameraController : MonoBehaviour
     public float rotationLerp = 0.5f;
     public Vector3 lookDirection;
 
+    private static CameraController cameraInstance;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+    }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+
+        if (cameraInstance == null)
+        {
+            cameraInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()

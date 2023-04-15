@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+//using System.Diagnostics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,8 +23,10 @@ public class PlayerController : MonoBehaviour
     //animator
     Animator animator;
 
-    [Header("Tag Change")]
+    [Header("Player TP, Tag Change")]
     public GameObject Player;
+    private Transform player;
+    private static PlayerController playerInstance;
 
 
     [Header("UI and Micean Throwable")]
@@ -107,11 +110,63 @@ public class PlayerController : MonoBehaviour
         //Setting UI
         JumpBoostUI.value = jumpBoost;
         HealthBarUI.value = currentHealth;
-        //EnergyCoreUI.enabled = false;
-        //MiceanUI.enabled = false;
-        //YarnballUI.enabled = false;
+        EnergyCoreUI.enabled = false;
+        MiceanUI.enabled = false;
+        YarnballUI.enabled = false;
+        CatnipUI.enabled = false;
         animator = GetComponent<Animator>();
 
+        /*/Position in New Scene
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        //player.transform.position = new Vector3(0, 0, 0);
+        if (SceneManager.GetActiveScene().name == "MarsLevel")
+        {
+            player.transform.position = new Vector3(435, 39, 205);
+        }//*/
+
+    }
+
+
+    void Awake()
+    {
+        //Data Preservation 
+        DontDestroyOnLoad(this.gameObject);
+
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        //Spawn
+        if (SceneManager.GetActiveScene().name == "HubLevel")
+        {
+            playerInstance.transform.position = new Vector3(1f, 1f, -30f);
+        }
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+        {
+            playerInstance.transform.position = new Vector3(436, 38, 204);
+        }
+        if (SceneManager.GetActiveScene().name == "MarsLevel")
+        {
+            playerInstance.transform.position = new Vector3(436f, 38f, 204f);
+        }
+        if (SceneManager.GetActiveScene().name == "JupiterLevel")
+        {
+            playerInstance.transform.position = new Vector3(436, 38, 204);
+        }
+        if (SceneManager.GetActiveScene().name == "CaturnLevel")
+        {
+            playerInstance.transform.position = new Vector3(436, 38, 204);
+        }
+        if (SceneManager.GetActiveScene().name == "CaturnCaveLevel")
+        {
+            playerInstance.transform.position = new Vector3(436, 38, 204);
+        }
+        
     }
 
     void FixedUpdate()
@@ -141,6 +196,10 @@ public class PlayerController : MonoBehaviour
     {       
         //Ground Check Raycast 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, WhatIsGround);
+
+        //Spawn Set Transform
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
 
         // Fire Rate
         if (gunheat > 0) gunheat -= Time.deltaTime;
@@ -303,6 +362,9 @@ public class PlayerController : MonoBehaviour
     // Item Collection and Portals
     void OnTriggerEnter(Collider other)
     {
+
+        //Items
+
         if (other.gameObject.CompareTag("EnergyCore"))
         {
             coreAmmo = coreAmmo = 1;
@@ -318,15 +380,12 @@ public class PlayerController : MonoBehaviour
             CatnipItem = CatnipItem = 1;
         }
 
-        if (other.gameObject.CompareTag("Catnip"))
-        {
-            CatnipItem = CatnipItem = 1;
-        }
-
         if (other.gameObject.CompareTag("Yarn"))
         {
             YarnballItem = YarnballItem = 1;
         }
+        
+        //Portals
 
         if (other.gameObject.CompareTag("PortalToHub"))
         {
@@ -359,13 +418,13 @@ public class PlayerController : MonoBehaviour
             sceneTracker = 5;
         }
 
-
         if (other.gameObject.CompareTag("DeathZone"))
         {
             SceneManager.LoadScene("DeathScreen");
             FindObjectOfType<CameraController>().ToggleCursor();
         }
     }
+
 
     void ToggleDialogue()
     {

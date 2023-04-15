@@ -9,6 +9,23 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    private static PauseMenu PauseInstance;
+
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+
+        if (PauseInstance == null)
+        {
+            PauseInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
