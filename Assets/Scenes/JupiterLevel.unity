@@ -3601,6 +3601,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97e8b84caf6660549b68da4132c18d9d, type: 3}
+--- !u!114 &1021449753 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 597125400, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+  m_PrefabInstance: {fileID: 876119950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1021719253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5213632103437554150, guid: 3f100d519f355b0488b40a898573ea1c, type: 3}
@@ -4011,6 +4022,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1002126283}
+    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: CatnipUI
       value: 
       objectReference: {fileID: 116470389}
@@ -4018,6 +4033,10 @@ PrefabInstance:
       propertyPath: MiceanUI
       value: 
       objectReference: {fileID: 680735537}
+    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+      propertyPath: YarnballUI
+      value: 
+      objectReference: {fileID: 1021449753}
     - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: HealthBarUI
       value: 
@@ -4030,6 +4049,10 @@ PrefabInstance:
       propertyPath: EnergyCoreUI
       value: 
       objectReference: {fileID: 133433924}
+    - target: {fileID: 660554708195827272, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+      propertyPath: _orientation
+      value: 
+      objectReference: {fileID: 1802527150}
     - target: {fileID: 1053976988369636450, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6219,7 +6242,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881204372}
-  m_LocalRotation: {x: -0.01814146, y: -0, z: -0, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141452, y: -0, z: 1.1641532e-10, w: 0.9998355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
