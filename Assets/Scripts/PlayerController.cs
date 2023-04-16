@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
     //Scenes
     int sceneTracker = 0;
     /* 0 is hub, 1 is tutorial, 2 is mars, 3 is jupiter, 4 is caturn(space), 5 is caturn(cave) */
+    public bool tutorial = false;
 
 
     // Start is called before the first frame update
@@ -391,6 +392,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("HubLevel");
             sceneTracker = 0;
+            tutorial = true;
         }
         if (other.gameObject.CompareTag("PortalToTutorial"))
         {
