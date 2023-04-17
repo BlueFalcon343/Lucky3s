@@ -402,6 +402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932799909252150426, guid: b562bf1250610934fb21232c35442369, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b562bf1250610934fb21232c35442369, type: 3}
@@ -629,6 +633,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (3)
@@ -909,6 +917,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932799909252150426, guid: b562bf1250610934fb21232c35442369, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b562bf1250610934fb21232c35442369, type: 3}
@@ -1091,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1784106522597653966, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4287ff8a11b0ca3429864c304ff309cc, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
@@ -1209,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1784106522597653966, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b74500a0a2ceb99408d79e115de71528, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
@@ -1847,6 +1867,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 796ebb3f421baa746b4ced463b4d3053, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1976799459468813334, guid: 3be5c5dd62068e44c9f21e5d4e2fb1cc, type: 3}
     - target: {fileID: 919132149155446097, guid: 796ebb3f421baa746b4ced463b4d3053, type: 3}
       propertyPath: m_Name
       value: little ring
@@ -1934,6 +1958,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b74500a0a2ceb99408d79e115de71528, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (2)
@@ -2409,6 +2437,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932799909252150426, guid: b562bf1250610934fb21232c35442369, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b562bf1250610934fb21232c35442369, type: 3}
@@ -2863,6 +2895,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1784106522597653966, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4287ff8a11b0ca3429864c304ff309cc, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
@@ -2874,6 +2910,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4287ff8a11b0ca3429864c304ff309cc, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (1)
@@ -3761,6 +3801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1784106522597653966, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc30b8e902caa540a9b7136178e3744, type: 3}
@@ -3836,6 +3880,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4287ff8a11b0ca3429864c304ff309cc, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (4)
@@ -4060,6 +4108,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b74500a0a2ceb99408d79e115de71528, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (8)
@@ -4182,6 +4234,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932799909252150426, guid: b562bf1250610934fb21232c35442369, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b562bf1250610934fb21232c35442369, type: 3}
@@ -4806,6 +4862,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4287ff8a11b0ca3429864c304ff309cc, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (7)
@@ -5018,6 +5078,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932799909252150426, guid: b562bf1250610934fb21232c35442369, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b562bf1250610934fb21232c35442369, type: 3}
@@ -5306,6 +5370,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b74500a0a2ceb99408d79e115de71528, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (6)
@@ -5485,6 +5553,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b74500a0a2ceb99408d79e115de71528, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock (10)
@@ -5871,6 +5943,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 478702531}
     m_Modifications:
+    - target: {fileID: 3063969126396081609, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e73561ef84336c458baa9c712e2e50c, type: 2}
     - target: {fileID: 3568429665652937756, guid: de0ae0b5864135a40bec2ba38839ea0c, type: 3}
       propertyPath: m_Name
       value: RotatingRock
