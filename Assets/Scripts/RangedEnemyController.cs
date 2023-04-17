@@ -150,10 +150,10 @@ public class RangedEnemyController : MonoBehaviour
 
         if (other.gameObject.CompareTag("AltFire"))
         {
+            // Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             freezeImpact.Play();
             this.enabled = false;
             EnemyRanged.tag = "Dead";
-            // Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             //gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             //yield return new WaitForSeconds(2f);
             //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
