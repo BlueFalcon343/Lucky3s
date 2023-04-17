@@ -378,6 +378,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 32768
   tutorial: 0
+  dialogueBox: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!114 &2843596889061267314
 MonoBehaviour:
   m_ObjectHideFlags: 0

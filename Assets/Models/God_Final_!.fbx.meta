@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: 553c7cf9598880f4b982ab2baa7031fd
+ModelImporter:
+  serializedVersion: 22103
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Abode
+    second: {fileID: 2100000, guid: 2a660ba194e34a249875c06e15da3080, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat_God
+    second: {fileID: 2100000, guid: 08a1717f06e2e164ea685f22cc901e97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 638d2b2c0a167044aa31239c3e862e42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillows
+    second: {fileID: 2100000, guid: 187dcbe01ce9e9a40b1bac6a63c11b23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pole_1
+    second: {fileID: 2100000, guid: cf5454ee4e4e97141a6ec0beaf3fb9df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pole_2
+    second: {fileID: 2100000, guid: 2a7489ead956fea41b87892c97e39826, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pole_3
+    second: {fileID: 2100000, guid: 78352c4c5e841b04ebc1554deed5a214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 2cd8193a897f51c48824d81f98f1c230, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Abode_BaseColor
+    second: {fileID: 2800000, guid: 9132a94dee5615c46ad553a0345b3ddc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Abode_Normal
+    second: {fileID: 2800000, guid: c687fecbf6e04eb429c87454ee98a021, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Abode_Roughness
+    second: {fileID: 2800000, guid: 0cda5b8fb43c4c14eacf588a4494409c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Floor_BaseColor
+    second: {fileID: 2800000, guid: 10e2aae97399967489071306c4654e3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Floor_Metallic
+    second: {fileID: 2800000, guid: a81b5868eec8d4244b142e3fdfad7675, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Floor_Normal
+    second: {fileID: 2800000, guid: 8161cb90e81e99447abee94e842307a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Floor_Roughness
+    second: {fileID: 2800000, guid: 99a3df9829d48c040b6efefd50551616, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pillows_BaseColor
+    second: {fileID: 2800000, guid: 65939feb5922c85438c710ca25ef670b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pillows_Metallic
+    second: {fileID: 2800000, guid: 5ed4b539581526a4090a35af1b335702, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pillows_Normal
+    second: {fileID: 2800000, guid: cc540b5988413d742b153e6f35ae3ff5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pillows_Roughness
+    second: {fileID: 2800000, guid: 91f8b5e980029cd47b94cdacb20283a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_1_BaseColor
+    second: {fileID: 2800000, guid: b85845266abca17488987a14b0c72c5a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_1_Metallic
+    second: {fileID: 2800000, guid: 0a3630aa41748a842bd280c18c60df87, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_1_Normal
+    second: {fileID: 2800000, guid: db13f7bfdffdf4a4d9de661d0076940d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_2_BaseColor
+    second: {fileID: 2800000, guid: 319ec22dc0c46e647acd18df0bf71a99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_2_Metallic
+    second: {fileID: 2800000, guid: 2de929da5075d524f9122ceb53aeb82d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_2_Normal
+    second: {fileID: 2800000, guid: 41d32625ae1e8dd46b88ae41e164a569, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_2_Roughness
+    second: {fileID: 2800000, guid: ac39ed63718b1fd458f2fa087b6db910, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_3_BaseColor
+    second: {fileID: 2800000, guid: fdcea13e77409594da594693009a0d97, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_3_Metallic
+    second: {fileID: 2800000, guid: 3c843f245c3227248b061b4d53a41053, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_3_Normal
+    second: {fileID: 2800000, guid: e5b646c19480cd549a94427518d52778, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_Pole_3_Roughness
+    second: {fileID: 2800000, guid: f184bf36664edae4993f95d09178f88b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_standardSurface1_BaseColor
+    second: {fileID: 2800000, guid: 6ea0c8bc81b34074aaa13823ba6668ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 1f0b7017b9acee74ca8a56293923af16, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_standardSurface1_Normal
+    second: {fileID: 2800000, guid: db557a1aba57a654cb604b922e61f34c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Chair_Untexed_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 3c2d5b5a71516a241ba7ca48d461c558, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Untexed_Cat_God_BaseColor
+    second: {fileID: 2800000, guid: f4231885b011a134883f7a2425d94061, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Untexed_Cat_God_Emissive
+    second: {fileID: 2800000, guid: 6ca7df2beb3f4034aa2d1798236ed819, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Untexed_Cat_God_Metallic
+    second: {fileID: 2800000, guid: 29d4dcf42bf69da40876c1808bc50baa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Untexed_Cat_God_Normal
+    second: {fileID: 2800000, guid: 058d835b629c9904fa0ec7d26249a699, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cat_God_Untexed_Cat_God_Roughness
+    second: {fileID: 2800000, guid: 6f4f8aab6c846d54d8b3643c949fab55, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 35
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 35
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
