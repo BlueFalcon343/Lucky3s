@@ -33,6 +33,12 @@ public class EnemyController : MonoBehaviour
     //Tag Changing Reference 
     public GameObject Enemy;
 
+    //Particles
+    public Transform ShakesPoint1, ShakesPoint2;
+    public Transform FreezePoint;
+    public ParticleSystem Frozen;
+    public ParticleSystem Shakes;
+
     private void Awake()
     {
         //player = GameObject.Find("Player").transform;
@@ -123,6 +129,8 @@ public class EnemyController : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             yield return new WaitForSeconds(2f);
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+            Instantiate(Shakes, ShakesPoint1.position, ShakesPoint1.rotation);
+            Instantiate(Shakes, ShakesPoint2.position, ShakesPoint2.rotation);
         }
 
         if (other.gameObject.CompareTag("AltFire"))
@@ -130,6 +138,7 @@ public class EnemyController : MonoBehaviour
             freezeHit.Play();
             this.enabled = false;
             Enemy.tag = "Dead";
+            Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             //gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             //yield return new WaitForSeconds(2f);
             //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
