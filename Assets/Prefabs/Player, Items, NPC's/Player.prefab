@@ -43,7 +43,7 @@ Transform:
   - {fileID: 660554707408381828}
   - {fileID: 660554706953315091}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6359177953876153880
 Animator:
@@ -377,6 +377,7 @@ MonoBehaviour:
   NPC5:
     serializedVersion: 2
     m_Bits: 32768
+  tutorial: 0
 --- !u!114 &2843596889061267314
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,14 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 449694f93b24b4c49b57fdc1c5aa1f81
-  - enabled: 1
     path: Assets/Scenes/HubLevel.unity
     guid: e04f8cf67042ece4d81cdcc7e4242217
   - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: 20ce205b56b4f9f40b14ab5cdedc3461
+  - enabled: 1
     path: Assets/Scenes/MarsLevel.unity
     guid: 625d37f32b92a954cbee6fa308e7932a
+  - enabled: 1
+    path: Assets/Scenes/JupiterLevel.unity
+    guid: c4f1fa76d4f4a0344a7651afed32885e
+  - enabled: 1
+    path: Assets/Scenes/CaturnLevel.unity
+    guid: ff5590501ae0ab44e9cebf9e26fbe8df
+  - enabled: 1
+    path: Assets/Scenes/CaturnCaveLevel.unity
+    guid: 415aa12719fb4fc47b54ce1ded2aa245
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 449694f93b24b4c49b57fdc1c5aa1f81
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: 1dcd31bd5bb3813418927b76910d96d3

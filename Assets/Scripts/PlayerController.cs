@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
         {
-            playerInstance.transform.position = new Vector3(436, 38, 204);
+            playerInstance.transform.position = new Vector3(256f, 6f, 440f);
         }
         if (SceneManager.GetActiveScene().name == "MarsLevel")
         {
@@ -157,15 +157,15 @@ public class PlayerController : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "JupiterLevel")
         {
-            playerInstance.transform.position = new Vector3(436, 38, 204);
+            playerInstance.transform.position = new Vector3(342f, 25f, 433f);
         }
         if (SceneManager.GetActiveScene().name == "CaturnLevel")
         {
-            playerInstance.transform.position = new Vector3(436, 38, 204);
+            playerInstance.transform.position = new Vector3(119F, 50F, 1443F);
         }
         if (SceneManager.GetActiveScene().name == "CaturnCaveLevel")
         {
-            playerInstance.transform.position = new Vector3(436, 38, 204);
+            playerInstance.transform.position = new Vector3(61f, -22f, -13f);
         }
         
     }
