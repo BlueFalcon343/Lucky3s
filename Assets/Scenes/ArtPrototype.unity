@@ -239,15 +239,52 @@ MonoBehaviour:
   rotationVector: {x: 0, y: 0}
   _orientation: {fileID: 0}
   _camera: {fileID: 0}
+  Player: {fileID: 0}
+  HealthBarUI: {fileID: 0}
+  JumpBoostUI: {fileID: 0}
+  EnergyCoreUI: {fileID: 0}
+  CatnipUI: {fileID: 0}
+  CatnipItem: 0
+  YarnballUI: {fileID: 0}
+  YarnballItem: 0
+  MiceanUI: {fileID: 0}
+  Micean: 0
+  MiceanThrowable: {fileID: 0}
   maxHealth: 10
   jumpBoost: 5
   jumpforce: 10
+  jumpPointLeft: {fileID: 0}
+  jumpPointRight: {fileID: 0}
   playerHeight: 0.5
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  coreAmmo: 0
+  waterSource: {fileID: 0}
+  freezeSource: {fileID: 0}
   firePoint: {fileID: 427880312}
   PlayerProjectile: {fileID: 6546191885384308249, guid: c3788c544c1a5d44084fa9df77213e5a, type: 3}
+  WaterGun: {fileID: 0}
+  FreezeGun: {fileID: 0}
+  BootFlame: {fileID: 0}
+  NPC1:
+    serializedVersion: 2
+    m_Bits: 0
+  NPC2:
+    serializedVersion: 2
+    m_Bits: 0
+  NPC3:
+    serializedVersion: 2
+    m_Bits: 0
+  NPC4:
+    serializedVersion: 2
+    m_Bits: 0
+  NPC5:
+    serializedVersion: 2
+    m_Bits: 0
+  tutorial: 0
+  dialogueBox: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!114 &74280607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,7 +1365,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924978952}
-  m_LocalRotation: {x: 0.018189494, y: -0.0000000020558961, z: -3.7401894e-11, w: 0.9998346}
+  m_LocalRotation: {x: 0.018189494, y: -0.0000000020558966, z: -3.74019e-11, w: 0.9998346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2323,6 +2360,7 @@ MonoBehaviour:
   ROTATESPEED: 25
   rotationPower: 3
   rotationLerp: 0.5
+  lookDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &1772220407
 MonoBehaviour:
   m_ObjectHideFlags: 0
