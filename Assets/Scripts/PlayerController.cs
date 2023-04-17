@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 //using System.Diagnostics;
@@ -98,6 +99,10 @@ public class PlayerController : MonoBehaviour
     /* 0 is hub, 1 is tutorial, 2 is mars, 3 is jupiter, 4 is caturn(space), 5 is caturn(cave) */
     public bool tutorial = false;
 
+    //Dialogue
+    public RawImage dialogueBox;
+    public TextMeshProUGUI dialogueText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -116,6 +121,7 @@ public class PlayerController : MonoBehaviour
         YarnballUI.enabled = false;
         CatnipUI.enabled = false;
         animator = GetComponent<Animator>();
+        dialogueBox.enabled = false;
 
         /*/Position in New Scene
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -124,7 +130,6 @@ public class PlayerController : MonoBehaviour
         {
             player.transform.position = new Vector3(435, 39, 205);
         }//*/
-
     }
 
 
@@ -167,7 +172,6 @@ public class PlayerController : MonoBehaviour
         {
             playerInstance.transform.position = new Vector3(61f, -22f, -13f);
         }
-        
     }
 
     void FixedUpdate()
@@ -189,8 +193,6 @@ public class PlayerController : MonoBehaviour
                jumpBoost = jumpBoost + 1;
                JumpBoostUI.value = jumpBoost;
         }
-
-        //ToggleDialogue();
     }
 
     void Update()
@@ -250,6 +252,8 @@ public class PlayerController : MonoBehaviour
         {
             MOVESPEED = 30f;
         }
+
+        ToggleDialogue();
     }
 
     void OnMove(InputValue movementValue)
@@ -432,27 +436,70 @@ public class PlayerController : MonoBehaviour
     {
         if (talk1)
         {
-            FindObjectOfType<NPCCatController>().DisplayDialogue(1);
+            DisplayDialogue(1);
         }
         else if (talk2)
         {
-            FindObjectOfType<NPCCatController>().DisplayDialogue(2);
+            DisplayDialogue(2);
         }
         else if (talk3)
         {
-            FindObjectOfType<NPCCatController>().DisplayDialogue(3);
+            DisplayDialogue(3);
         }
         else if (talk4)
         {
-            FindObjectOfType<NPCCatController>().DisplayDialogue(4);
+            DisplayDialogue(4);
         }
         else if (talk5)
         {
-            FindObjectOfType<NPCCatController>().DisplayDialogue(5);
+            DisplayDialogue(5);
         }
         else
         {
-            FindObjectOfType<NPCCatController>().RemoveDialogue();
+            DisplayDialogue(0);
+        }
+    }
+
+    void DisplayDialogue(int dialogueInt)
+    {
+        switch(dialogueInt)
+        {
+            case 1:
+            {
+                dialogueBox.enabled = true;
+                dialogueText.text = "Welcome fellow human being. I have created a closed simulation for you to practice navigating new environments.";
+                break;
+            }
+            case 2:
+            {
+                dialogueBox.enabled = true;
+                dialogueText.text = "Your human boots are equipped with rocket boosters. You can press (…) to activate them as long as you have fuel. Don’t worry, your fuel recharges on solid ground.";
+                break;
+            }
+            case 3:
+            {
+                dialogueBox.enabled = true;
+                dialogueText.text = "You have a water gun that you could use to spray any hostile cats. You can’t use it kill us *cough* *cough* I mean them, but they’ll be stunned for a few seconds. Press (…) to fire it.";
+                break;
+            }
+            case 4:
+            {
+                dialogueBox.enabled = true;
+                dialogueText.text = "There are energy cores scattered across the map that you can collect. If you have one, press (…) to fire a blast of freezing energy that can stop those darn non-human cats in their tracks.";
+                break;
+            }
+            case 5:
+            {
+                dialogueBox.enabled = true;
+                dialogueText.text = "I think you’re ready for the real thing. Head through the portal in front of you. Catkind is counting on you … and humankind too. Good luck!";
+                break;
+            }
+            default:
+            {
+                dialogueBox.enabled = false;
+                dialogueText.text = " ";
+                break;
+            }
         }
     }
 }

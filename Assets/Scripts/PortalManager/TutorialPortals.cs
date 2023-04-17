@@ -6,6 +6,7 @@ public class TutorialPortals : MonoBehaviour
 {
     public GameObject MarsPortal;
     public GameObject TutorialPortal;
+    public GameObject FirstCat;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class TutorialPortals : MonoBehaviour
         {
             MarsPortal.SetActive(true);
             TutorialPortal.SetActive(false);
+            FirstCat.SetActive(false);
         }
     }
 }
