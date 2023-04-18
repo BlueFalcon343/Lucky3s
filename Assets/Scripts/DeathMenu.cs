@@ -8,7 +8,7 @@ public class DeathMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("MarsLevel");
+        SceneManager.LoadScene("HubLevel");
         FindObjectOfType<CameraController>().ToggleCursor();
     }
     public void QuitGame()
