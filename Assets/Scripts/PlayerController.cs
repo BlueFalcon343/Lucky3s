@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 movement;
     public Transform _orientation;
     public GameObject _camera;
+    public float count = -1;
 
     //animator
     Animator animator;
@@ -103,6 +104,7 @@ public class PlayerController : MonoBehaviour
     //Dialogue
     public RawImage dialogueBox;
     public TextMeshProUGUI dialogueText;
+    public bool dialogue;
 
 
     // Start is called before the first frame update
@@ -184,22 +186,31 @@ public class PlayerController : MonoBehaviour
             movement = Vector3.zero;
         }
         //Set Force and Refuel Boost Jumps
-        if(grounded == true)
+        if(grounded == true || jumpBoost == 5)
         {
             jumpforce = 12f;
             animator.SetBool("isFalling", false);
         }
+        else if(grounded != true && jumpBoost == 5)
+        {
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            animator.SetBool("isFalling", true);
+        }
         
         while (grounded == true && jumpBoost <= 4)
         {
-               jumpBoost = jumpBoost + 1;
-               JumpBoostUI.value = jumpBoost;
+            jumpBoost = jumpBoost + 1;
+            JumpBoostUI.value = jumpBoost;
         }
-
+        /*
         if(grounded == false)
         {
             animator.SetBool("isFalling", true);
         }
+        */
     }
 
     void Update()
@@ -261,6 +272,20 @@ public class PlayerController : MonoBehaviour
         }
 
         ToggleDialogue();
+
+        // fast fall
+        if(jumpBoost == 0)
+        {
+            count += Time.deltaTime;
+            if (count >= 1)
+            {
+                rb.AddForce(Vector3.down * count * 1.5f, ForceMode.Force);
+            }
+        }
+        else
+        {
+            count = -1;
+        }
     }
 
     void OnMove(InputValue movementValue)
@@ -308,7 +333,7 @@ public class PlayerController : MonoBehaviour
         if(currentHealth <= 0)
         {
             SceneManager.LoadScene("DeathScreen");
-            FindObjectOfType<CameraController>().ToggleCursor();
+            Cursor.visible = true;
         }
     }
 
@@ -321,7 +346,7 @@ public class PlayerController : MonoBehaviour
         talk4 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC4);
         talk5 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC5);
         
-        if ((gunheat <= 0 && !PauseMenu.GameIsPaused) && !(talk1||talk2||talk3||talk4||talk5))
+        if ((gunheat <= 0 && !PauseMenu.GameIsPaused) && !(talk1||talk2||talk3||talk4||talk5) && !(dialogue))
         {
             PlayerProjectile.tag = "Fire";
             waterSource.Play();
@@ -436,10 +461,9 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("DeathZone"))
         {
             SceneManager.LoadScene("DeathScreen");
-            FindObjectOfType<CameraController>().ToggleCursor();
+            Cursor.visible = true;
         }
     }
-
 
     void ToggleDialogue()
     {
@@ -471,6 +495,7 @@ public class PlayerController : MonoBehaviour
 
     void DisplayDialogue(int dialogueInt)
     {
+        dialogue = true;
         switch(dialogueInt)
         {
             case 1:
@@ -482,31 +507,32 @@ public class PlayerController : MonoBehaviour
             case 2:
             {
                 dialogueBox.enabled = true;
-                dialogueText.text = "Your human boots are equipped with rocket boosters. You can press (…) to activate them as long as you have fuel. Don’t worry, your fuel recharges on solid ground.";
+                dialogueText.text = "Your human boots are equipped with rocket boosters that recharge on the ground. You can press (SPACE/A) to activate them as long as you have fuel.";
                 break;
             }
             case 3:
             {
                 dialogueBox.enabled = true;
-                dialogueText.text = "You have a water gun that you could use to spray any hostile cats. You can’t use it kill us *cough* *cough* I mean them, but they’ll be stunned for a few seconds. Press (…) to fire it.";
+                dialogueText.text = "You have a water gun that you could use to spray any hostile cats. They’ll be stunned for a few seconds. Press (LMB/B) to fire it.";
                 break;
             }
             case 4:
             {
                 dialogueBox.enabled = true;
-                dialogueText.text = "There are energy cores scattered across the map that you can collect. If you have one, press (…) to fire a blast of freezing energy that can stop those darn non-human cats in their tracks.";
+                dialogueText.text = "There are energy cores scattered across the map that you can collect. If you have one, press (RMB/Y) to fire a blast of freezing energy that can stop those darn non-human cats in their tracks.";
                 break;
             }
             case 5:
             {
                 dialogueBox.enabled = true;
-                dialogueText.text = "I think you’re ready for the real thing. Head through the portal in front of you. Catkind is counting on you … and humankind too. Good luck!";
+                dialogueText.text = "You can find little Miceans on your journey. If you have one, press (E/X) to throw them and distract the cats. Good Luck!";
                 break;
             }
             default:
             {
                 dialogueBox.enabled = false;
                 dialogueText.text = " ";
+                dialogue = false;
                 break;
             }
         }

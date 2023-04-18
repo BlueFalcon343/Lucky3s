@@ -2095,6 +2095,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 557371967}
   m_SourcePrefab: {fileID: 100100000, guid: d3c77e146d966474a86647b696527f5d, type: 3}
+--- !u!1 &599403313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 426622400105617112, guid: 65d117b111f6df045b95c0401de457c6, type: 3}
+  m_PrefabInstance: {fileID: 1774582042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &613332777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2280,6 +2285,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -3330960944436859095, guid: 19a733f7a30863347973ecdad0115bff, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 599403313}
     - target: {fileID: -3330960944436859095, guid: 19a733f7a30863347973ecdad0115bff, type: 3}
       propertyPath: endMarker
       value: 
@@ -2890,6 +2899,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -3330960944436859095, guid: 19a733f7a30863347973ecdad0115bff, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 599403313}
     - target: {fileID: -3330960944436859095, guid: 19a733f7a30863347973ecdad0115bff, type: 3}
       propertyPath: endMarker
       value: 
@@ -4010,6 +4023,10 @@ PrefabInstance:
     - target: {fileID: 7352373012962752068, guid: 7f83809f6b53a3f41b09e4c3868bb614, type: 3}
       propertyPath: m_LocalScale.z
       value: 21.702135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469398971540869603, guid: 7f83809f6b53a3f41b09e4c3868bb614, type: 3}
+      propertyPath: m_TagString
+      value: PortalInToCaturn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -6071,6 +6088,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -3330960944436859095, guid: 19a733f7a30863347973ecdad0115bff, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 599403313}
+    - target: {fileID: -3330960944436859095, guid: 19a733f7a30863347973ecdad0115bff, type: 3}
       propertyPath: endMarker
       value: 
       objectReference: {fileID: 1526602657}
@@ -6137,6 +6158,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3279021214319950114, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 3279021214449311920, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_Name
       value: Cut Scene Caturn
@@ -6224,6 +6249,14 @@ PrefabInstance:
     - target: {fileID: 3279021214449311947, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279021214449581766, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279021214688667463, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-
+    void Awake()
+    {
+        FindObjectOfType<CameraController>().ToggleCursor();
+    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("HubLevel");
