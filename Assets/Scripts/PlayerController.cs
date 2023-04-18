@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     public float jumpforce = 12f;
     public Transform jumpPointLeft;
     public Transform jumpPointRight;
+    public AudioSource rocketSource;
 
     //Jump Recharge and Ground Check
     [Header("Ground Check")]
@@ -186,12 +187,18 @@ public class PlayerController : MonoBehaviour
         if(grounded == true)
         {
             jumpforce = 12f;
+            animator.SetBool("isFalling", false);
         }
         
         while (grounded == true && jumpBoost <= 4)
         {
                jumpBoost = jumpBoost + 1;
                JumpBoostUI.value = jumpBoost;
+        }
+
+        if(grounded == false)
+        {
+            animator.SetBool("isFalling", true);
         }
     }
 
@@ -275,13 +282,15 @@ public class PlayerController : MonoBehaviour
     // Jump and Jump Boost
     void OnJump()
     {
-        if(grounded == true)
+        //animator.SetBool("isJumping", true);
+        if (grounded == true)
         {
             rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
         }
 
         if(jumpBoost >= 1 && grounded == false)
         {
+            rocketSource.Play();
             jumpforce = 10f;
             jumpBoost = jumpBoost - 1;
             JumpBoostUI.value = jumpBoost;

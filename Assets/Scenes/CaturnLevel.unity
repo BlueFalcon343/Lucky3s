@@ -746,6 +746,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1700136148, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.69999886
+      objectReference: {fileID: 0}
     - target: {fileID: 6187579126414114743, guid: b2ac7f559d141014eb95712c89f15485, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6136,6 +6140,10 @@ PrefabInstance:
     - target: {fileID: 3279021214449311920, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_Name
       value: Cut Scene Caturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279021214449311920, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279021214449311947, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_Pivot.x
