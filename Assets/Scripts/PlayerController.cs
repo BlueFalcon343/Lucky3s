@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+//using static System.Net.Mime.MediaTypeNames;
 //using System.Diagnostics;
 
 public class PlayerController : MonoBehaviour
@@ -41,10 +42,20 @@ public class PlayerController : MonoBehaviour
 
     public Image YarnballUI;
     public int YarnballItem;
-    public Image MiceanUI;
 
+    public Image MiceanUI;
+    public TextMeshProUGUI scoreMice;
     public int Micean;
+    int scoreM;
     public GameObject MiceanThrowable;
+
+    public Image CatCoinUI;
+    public TextMeshProUGUI scoreCoin;
+    int score = 0;
+
+
+
+    
 
 
     // health variables
@@ -117,14 +128,20 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
 
         //Setting UI
-        JumpBoostUI.value = jumpBoost;
-        HealthBarUI.value = currentHealth;
-        EnergyCoreUI.enabled = false;
-        MiceanUI.enabled = false;
         YarnballUI.enabled = false;
         CatnipUI.enabled = false;
-        animator = GetComponent<Animator>();
+        MiceanUI.enabled = false;
+        CatCoinUI.enabled = true;
         dialogueBox.enabled = false;
+        EnergyCoreUI.enabled = false;
+        JumpBoostUI.value = jumpBoost;
+        HealthBarUI.value = currentHealth;
+
+        scoreCoin.text = "X" + score.ToString();
+        scoreMice.text = scoreM.ToString();
+
+
+
 
         /*/Position in New Scene
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -247,10 +264,12 @@ public class PlayerController : MonoBehaviour
         if (Micean >= 1)
         {
             MiceanUI.enabled = true;
+            scoreMice.enabled = true;
         }
         else
         {
             MiceanUI.enabled = false;
+            scoreMice.enabled = false;
         }
 
         if (YarnballItem == 1)
@@ -376,6 +395,8 @@ public class PlayerController : MonoBehaviour
             Player.tag = "Player1";
             Instantiate(MiceanThrowable, firePoint.position, firePoint.rotation);
             Micean = Micean - 1;
+            scoreM = scoreM - 1;
+            scoreMice.text = scoreM.ToString();
             yield return new WaitForSeconds(10f);
             gameObject.name = "Player";
             Player.tag = "Player";
@@ -412,6 +433,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Micean"))
         {
             Micean = Micean + 1;
+            scoreM = scoreM + 1;
+            scoreMice.text = scoreM.ToString();
         }
 
         if (other.gameObject.CompareTag("Catnip"))
@@ -423,7 +446,14 @@ public class PlayerController : MonoBehaviour
         {
             YarnballItem = YarnballItem = 1;
         }
-        
+
+        if (other.gameObject.CompareTag("CatCoin"))
+        {
+            score = score + 1;
+            scoreCoin.text = "X" + score.ToString();
+
+        }
+
         //Portals
 
         if (other.gameObject.CompareTag("PortalToHub"))
