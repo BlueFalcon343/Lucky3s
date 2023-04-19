@@ -345,8 +345,11 @@ MonoBehaviour:
   YarnballUI: {fileID: 0}
   YarnballItem: 0
   MiceanUI: {fileID: 0}
+  scoreMice: {fileID: 0}
   Micean: 0
   MiceanThrowable: {fileID: 333545653354875014, guid: 625f3fe65c4d067429b7eec926e878df, type: 3}
+  CatCoinUI: {fileID: 0}
+  scoreCoin: {fileID: 0}
   maxHealth: 10
   jumpBoost: 5
   jumpforce: 10
@@ -380,6 +383,12 @@ MonoBehaviour:
   NPC5:
     serializedVersion: 2
     m_Bits: 32768
+  CatPedestal:
+    serializedVersion: 2
+    m_Bits: 65536
+  YarnPedestal:
+    serializedVersion: 2
+    m_Bits: 131072
   tutorial: 0
   dialogueBox: {fileID: 0}
   dialogueText: {fileID: 0}

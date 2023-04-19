@@ -241,6 +241,23 @@ public class PlayerController : MonoBehaviour
         //Spawn Set Transform
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
+        if(Input.GetKey("j"))
+        {
+            SceneManager.LoadScene("MarsLevel");
+        }
+        if (Input.GetKey("k"))
+        {
+            SceneManager.LoadScene("JupiterLevel");
+        }
+        if (Input.GetKey("l"))
+        {
+            SceneManager.LoadScene("CaturnLevel");
+        }
+        if (Input.GetKey("i"))
+        {
+            SceneManager.LoadScene("CaturnCaveLevel");
+        }
+
 
         // Fire Rate
         if (gunheat > 0) gunheat -= Time.deltaTime;
