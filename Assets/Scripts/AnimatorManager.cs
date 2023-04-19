@@ -16,7 +16,7 @@ public class AnimatorManager : MonoBehaviour
     {
         /*bool isWalkingPressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d") || Input.GetButton("Horizontal") || Input.GetButton("Vertical");
         bool isWalking = animator.GetBool("isWalking");*/
-        if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0 || Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") < 0)
         {
             animator.SetBool("isWalking", true);
         }
