@@ -49,12 +49,12 @@ public class WinCutScene : MonoBehaviour
     {
         if (WinScene == true)
         {
-            GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
+            //GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
             Time.timeScale = 0f;
         }
         else
         {
-            GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
+            //GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
             Time.timeScale = 1f;
         }
 
