@@ -32,6 +32,7 @@ public class WinCutScene : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = true;
         DontDestroyOnLoad(this.gameObject);
 
         if (WinInstance == null)
@@ -50,12 +51,10 @@ public class WinCutScene : MonoBehaviour
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
             Time.timeScale = 0f;
-            Cursor.visible = true;
         }
         else
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
-            Cursor.visible = false;
             Time.timeScale = 1f;
         }
 

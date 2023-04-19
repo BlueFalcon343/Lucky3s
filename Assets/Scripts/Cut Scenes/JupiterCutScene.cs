@@ -29,6 +29,7 @@ public class JupiterCutScene : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = true;
         DontDestroyOnLoad(this.gameObject);
 
         if (JupiterInstance == null)
@@ -39,9 +40,6 @@ public class JupiterCutScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
     }
 
     void Update()
@@ -50,12 +48,10 @@ public class JupiterCutScene : MonoBehaviour
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
             Time.timeScale = 0f;
-            Cursor.visible = true;
         }
         else
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
-            Cursor.visible = false;
             Time.timeScale = 1f;
         }
 
@@ -94,5 +90,6 @@ public class JupiterCutScene : MonoBehaviour
     {
         JupiterCut3.SetActive(false);
         JupiterScene = false;
+        Cursor.visible = false;
     }
 }

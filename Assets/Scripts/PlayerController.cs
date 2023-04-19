@@ -143,8 +143,8 @@ public class PlayerController : MonoBehaviour
         scoreCoin.text = "X" + score.ToString();
         scoreMice.text = scoreM.ToString();
 
-
-
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
 
         /*/Position in New Scene
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -258,6 +258,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("CaturnCaveLevel");
         }
 
+        if(PauseMenu.GameIsPaused)
+        {
+            Cursor.visible = true;
+        }
 
         // Fire Rate
         if (gunheat > 0) gunheat -= Time.deltaTime;
@@ -555,7 +559,7 @@ public class PlayerController : MonoBehaviour
         else if (pedestal2)
         {
             FindObjectOfType<Pedestal>().ShowYarnball();
-            CatnipItem = 0;
+            YarnballItem = 0;
         }
         else
         {

@@ -7,6 +7,7 @@ public class DeathMenu : MonoBehaviour
 {
     void Awake()
     {
+        Cursor.visible = true;
         FindObjectOfType<CameraController>().ToggleCursor();
     }
     public void LoadMenu()

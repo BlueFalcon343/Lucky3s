@@ -30,6 +30,7 @@ public class MarsCutScene : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = true;
         DontDestroyOnLoad(this.gameObject);
 
         if (MarsInstance == null)
@@ -48,12 +49,11 @@ public class MarsCutScene : MonoBehaviour
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
             Time.timeScale = 0f;
-            Cursor.visible = true;
+            
         }
         else
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
-            Cursor.visible = false;
             Time.timeScale = 1f;
         }
 
@@ -91,5 +91,6 @@ public class MarsCutScene : MonoBehaviour
     {
         MarsCut3.SetActive(false);
         MarsScene = false;
+        Cursor.visible = false;
     }
 }

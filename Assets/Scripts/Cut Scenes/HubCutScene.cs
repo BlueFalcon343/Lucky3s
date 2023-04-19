@@ -42,6 +42,8 @@ public class HubCutScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Cursor.visible = true;
     }
 
     void Update()
@@ -50,12 +52,10 @@ public class HubCutScene : MonoBehaviour
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
             Time.timeScale = 0f;
-            Cursor.visible = true;
         }
         else
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
-            Cursor.visible = false;
             Time.timeScale = 1f;
         }
 
@@ -105,6 +105,7 @@ public class HubCutScene : MonoBehaviour
     {
         IntroCut4.SetActive(false);
         HubScene = false;
+        Cursor.visible = false;
     }
 }
 

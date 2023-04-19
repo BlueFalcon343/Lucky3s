@@ -29,6 +29,7 @@ public class CaturnCutScene : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = true;
         DontDestroyOnLoad(this.gameObject);
 
         if (CaturnInstance == null)
@@ -47,12 +48,10 @@ public class CaturnCutScene : MonoBehaviour
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = true;
             Time.timeScale = 0f;
-            Cursor.visible = true;
         }
         else
         {
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
-            Cursor.visible = false;
             Time.timeScale = 1f;
         }
 
@@ -90,5 +89,6 @@ public class CaturnCutScene : MonoBehaviour
     {
         CaturnCut3.SetActive(false);
         CaturnScene = false;
+        Cursor.visible = false;
     }
 }
