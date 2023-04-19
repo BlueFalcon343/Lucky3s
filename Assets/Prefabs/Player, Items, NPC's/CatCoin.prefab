@@ -13,28 +13,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20.510643
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20.510643
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20.510643
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.020134
+      value: 375.1934
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.69
+      value: 30.647
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.91
+      value: 194.80756
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.38580212
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.92258155
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalRotation.z
@@ -46,12 +58,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 134.613
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6b4643223d3505409e871f0013dd81e, type: 2}
     - target: {fileID: 919132149155446097, guid: 1551b25540bd9654bb163a8b7e6ed665, type: 3}
       propertyPath: m_Name
       value: CatCoin

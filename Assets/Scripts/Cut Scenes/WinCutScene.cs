@@ -79,5 +79,6 @@ public class WinCutScene : MonoBehaviour
     {
         WinCut4.SetActive(false);
         WinScene = false;
+        SceneManager.LoadScene("MainMenu");
     }
 }

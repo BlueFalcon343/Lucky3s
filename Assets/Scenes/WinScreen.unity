@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 6606629927660079943, guid: b2130a24a3d88f149acf3567a06440aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6788833685317623567, guid: b2130a24a3d88f149acf3567a06440aa, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 179.99976
@@ -314,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 8268781522169512584, guid: b2130a24a3d88f149acf3567a06440aa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268781523530637170, guid: b2130a24a3d88f149acf3567a06440aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8479573906906780398, guid: b2130a24a3d88f149acf3567a06440aa, type: 3}
       propertyPath: m_AnchoredPosition.x
