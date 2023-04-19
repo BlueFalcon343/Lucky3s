@@ -10,11 +10,12 @@ public class MarsCutScene : MonoBehaviour
 
     private static MarsCutScene MarsInstance;
 
-    private bool MarsScene = false;
+    public bool MarsScene = false;
 
     public GameObject MarsCut1;
     public GameObject MarsCut2;
     public GameObject MarsCut3;
+    int screen = 0;
 
     void Start()
     {
@@ -38,9 +39,25 @@ public class MarsCutScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
-
-
+    public void OnA()
+    {
+        if (screen == 0)
+        {
+            Next();
+            screen = 1;
+        }
+        else if (screen == 1)
+        {
+            Next1();
+            screen = 2;
+        }
+        else if (screen == 2)
+        {
+            Next2();
+            screen = 0;
+        }
     }
 
     void Update()

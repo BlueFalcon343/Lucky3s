@@ -10,20 +10,22 @@ public class WinCutScene : MonoBehaviour
 
     private static WinCutScene WinInstance;
 
-    private bool WinScene = false;
+    public bool WinScene = false;
 
     public GameObject WinCut1;
     public GameObject WinCut2;
     public GameObject WinCut3;
     public GameObject WinCut4;
 
+    int screen = 0;
+
     void Start()
     {
-
         if (SceneManager.GetActiveScene().name == "WinScreen")
         {
             WinScene = true;
             WinCut1.SetActive(true);
+            screen = 0;
         }
     }
 
@@ -57,6 +59,30 @@ public class WinCutScene : MonoBehaviour
             GameObject.Find("Audio Source").GetComponent<AudioSource>().mute = false;
             Cursor.visible = false;
             Time.timeScale = 1f;
+        }
+    }
+
+    public void OnA()
+    {
+        if (screen == 0)
+        {
+            Next();
+            screen = 1;
+        }
+        else if (screen == 1)
+        {
+            Next1();
+            screen = 2;
+        }
+        else if (screen == 2)
+        {
+            Next2();
+            screen = 3;
+        }
+        else if (screen == 3)
+        {
+            Next3();
+            screen = 0;
         }
     }
 

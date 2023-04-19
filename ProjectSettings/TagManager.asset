@@ -18,6 +18,7 @@ TagManager:
   - PortalToJupiter
   - PortalToCaturn
   - Micean
+  - Yarn
   layers:
   - Default
   - TransparentFX
@@ -35,8 +36,8 @@ TagManager:
   - NPC3
   - NPC4
   - NPC5
-  - 
-  - 
+  - CatPedestal
+  - YarnPedestal
   - 
   - 
   - 

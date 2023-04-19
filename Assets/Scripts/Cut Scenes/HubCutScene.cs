@@ -11,20 +11,21 @@ public class HubCutScene : MonoBehaviour
 
     private static HubCutScene HubInstance;
 
-    private bool HubScene = false;
+    public bool HubScene = false;
 
     public GameObject IntroCut1;
     public GameObject IntroCut2;
     public GameObject IntroCut3;
     public GameObject IntroCut4;
+    int screen = 0;
 
     void Start()
     {
-
         if (SceneManager.GetActiveScene().name == "HubLevel")
         {
             HubScene = true;
             IntroCut1.SetActive(true);
+            int screen = 0;
         }
     }
 
@@ -40,9 +41,6 @@ public class HubCutScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
     }
 
     void Update()
@@ -61,6 +59,32 @@ public class HubCutScene : MonoBehaviour
         }
     }
 
+    public void OnA()
+    {
+        Debug.Log("OnA");
+        if (screen == 0)
+        {
+            Next();
+            Debug.Log("Next");
+            screen = 1;
+        }
+        else if (screen == 1)
+        {
+            Next1();
+            screen = 2;
+        }
+        else if (screen == 2)
+        {
+            Next2();
+            screen = 3;
+        }
+        else if (screen == 3)
+        {
+            Next3();
+            screen = 4;
+        }
+    }
+    
     public void Next()
     {
         IntroCut1.SetActive(false);

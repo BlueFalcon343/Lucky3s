@@ -10,15 +10,15 @@ public class JupiterCutScene : MonoBehaviour
 
     private static JupiterCutScene JupiterInstance;
 
-    private bool JupiterScene = false;
+    public bool JupiterScene = false;
 
     public GameObject JupiterCut1;
     public GameObject JupiterCut2;
     public GameObject JupiterCut3;
+    int screen = 0;
 
     void Start()
     {
-
         if (SceneManager.GetActiveScene().name == "JupiterLevel")
         {
             JupiterScene = true;
@@ -59,6 +59,24 @@ public class JupiterCutScene : MonoBehaviour
         }
     }
 
+    public void OnA()
+    {
+        if (screen == 0)
+        {
+            Next();
+            screen = 1;
+        }
+        else if (screen == 1)
+        {
+            Next1();
+            screen = 2;
+        }
+        else if (screen == 2)
+        {
+            Next2();
+            screen = 0;
+        }
+    }
     public void Next()
     {
         JupiterCut1.SetActive(false);

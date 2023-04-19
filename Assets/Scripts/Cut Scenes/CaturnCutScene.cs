@@ -10,15 +10,15 @@ public class CaturnCutScene : MonoBehaviour
 
     private static CaturnCutScene CaturnInstance;
 
-    private bool CaturnScene = false;
+    public bool CaturnScene = false;
 
     public GameObject CaturnCut1;
     public GameObject CaturnCut2;
     public GameObject CaturnCut3;
+    int screen = 0;
 
     void Start()
     {
-
         if (SceneManager.GetActiveScene().name == "CaturnLevel")
         {
             CaturnScene = true;
@@ -38,9 +38,6 @@ public class CaturnCutScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
     }
 
     void Update()
@@ -59,11 +56,29 @@ public class CaturnCutScene : MonoBehaviour
         }
     }
 
+    public void OnA()
+    {
+        if (screen == 0)
+        {
+            Next();
+            screen = 1;
+        }
+        else if (screen == 1)
+        {
+            Next1();
+            screen = 2;
+        }
+        else if (screen == 2)
+        {
+            Next2();
+            screen = 0;
+        }
+
+    }
     public void Next()
     {
         CaturnCut1.SetActive(false);
         CaturnCut2.SetActive(true);
-
     }
     public void Next1()
     {

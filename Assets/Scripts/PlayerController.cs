@@ -101,16 +101,22 @@ public class PlayerController : MonoBehaviour
     bool talk3;
     bool talk4;
     bool talk5;
+    bool pedestal1;
+    bool pedestal2;
     public LayerMask NPC1;
     public LayerMask NPC2;
     public LayerMask NPC3;
     public LayerMask NPC4;
     public LayerMask NPC5;
+    public LayerMask CatPedestal;
+    public LayerMask YarnPedestal;
 
     //Scenes
     int sceneTracker = 0;
     /* 0 is hub, 1 is tutorial, 2 is mars, 3 is jupiter, 4 is caturn(space), 5 is caturn(cave) */
     public bool tutorial = false;
+    // cutscene progression
+    int a = 1, b = 1, c = 1, d = 1, e = 1;
 
     //Dialogue
     public RawImage dialogueBox;
@@ -289,7 +295,7 @@ public class PlayerController : MonoBehaviour
         {
             MOVESPEED = 30f;
         }
-
+        
         ToggleDialogue();
 
         // fast fall
@@ -364,8 +370,10 @@ public class PlayerController : MonoBehaviour
         talk3 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC3);
         talk4 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC4);
         talk5 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC5);
+        pedestal1 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, CatPedestal);
+        pedestal2 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, YarnPedestal);
         
-        if ((gunheat <= 0 && !PauseMenu.GameIsPaused) && !(talk1||talk2||talk3||talk4||talk5) && !(dialogue))
+        if ((gunheat <= 0 && !PauseMenu.GameIsPaused) && !(talk1||talk2||talk3||talk4||talk5||pedestal1||pedestal2) && !(dialogue))
         {
             PlayerProjectile.tag = "Fire";
             waterSource.Play();
@@ -400,7 +408,6 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(10f);
             gameObject.name = "Player";
             Player.tag = "Player";
-
         }
     }
 
@@ -410,7 +417,13 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<PauseMenu>().Resume();
         }
+
+        /*if ((FindObjectOfType<HubCutScene>().HubScene)||(FindObjectOfType<JupiterCutScene>().JupiterScene)||(FindObjectOfType<MarsCutScene>().MarsScene)||(FindObjectOfType<CaturnCutScene>().CaturnScene)||(FindObjectOfType<WinCutScene>().WinScene))
+        {
+            ToggleCutScene();
+        }*/
     }
+
     public void OnB()
     {
         if (PauseMenu.GameIsPaused)
@@ -451,7 +464,6 @@ public class PlayerController : MonoBehaviour
         {
             score = score + 1;
             scoreCoin.text = "X" + score.ToString();
-
         }
 
         //Portals
@@ -487,6 +499,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("CaturnCaveLevel");
             sceneTracker = 5;
         }
+        if (other.gameObject.CompareTag("ExitPortal"))
+        {
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        }
 
         if (other.gameObject.CompareTag("DeathZone"))
         {
@@ -516,6 +532,16 @@ public class PlayerController : MonoBehaviour
         else if (talk5)
         {
             DisplayDialogue(5);
+        }
+        else if (pedestal1)
+        {
+            FindObjectOfType<Pedestal>().ShowCatnip();
+            CatnipItem = 0;
+        }
+        else if (pedestal2)
+        {
+            FindObjectOfType<Pedestal>().ShowYarnball();
+            CatnipItem = 0;
         }
         else
         {
@@ -567,4 +593,160 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+/*
+    void ToggleCutScene()
+    {
+        if (SceneManager.GetActiveScene().name == "CaturnLevel")
+        {
+           switch(a)
+           {
+                case 1:
+                {
+                    a = 2;
+                    FindObjectOfType<CaturnCutScene>().Next();
+                    break;
+                }
+                case 2:
+                {
+                    a = 3;
+                    FindObjectOfType<CaturnCutScene>().Next1();
+                    break;
+                }
+                case 3:
+                {
+                    a = 0;
+                    FindObjectOfType<CaturnCutScene>().Next2();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+           }
+        }
+        else if (SceneManager.GetActiveScene().name == "HubLevel")
+        {
+           switch(b)
+           {
+                case 1:
+                {
+                    b = 2;
+                    FindObjectOfType<HubCutScene>().Next();
+                    break;
+                }
+                case 2:
+                {
+                    b = 3;
+                    FindObjectOfType<HubCutScene>().Next1();
+                    break;
+                }
+                case 3:
+                {
+                    b = 4;
+                    FindObjectOfType<HubCutScene>().Next2();
+                    break;
+                }
+                case 4:
+                {
+                    b = 0;
+                    FindObjectOfType<HubCutScene>().Next3();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+           }
+        }
+        else if (SceneManager.GetActiveScene().name == "JupiterLevel")
+        {
+           switch(c)
+           {
+                case 1:
+                {
+                    c = 2;
+                    FindObjectOfType<JupiterCutScene>().Next();
+                    break;
+                }
+                case 2:
+                {
+                    c = 3;
+                    FindObjectOfType<JupiterCutScene>().Next1();
+                    break;
+                }
+                case 3:
+                {
+                    c = 0;
+                    FindObjectOfType<JupiterCutScene>().Next2();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+           }
+        }
+        else if (SceneManager.GetActiveScene().name == "MarsLevel")
+        {
+           switch(d)
+           {
+                case 1:
+                {
+                    d = 2;
+                    FindObjectOfType<MarsCutScene>().Next();
+                    break;
+                }
+                case 2:
+                {
+                    d = 3;
+                    FindObjectOfType<MarsCutScene>().Next1();
+                    break;
+                }
+                case 3:
+                {
+                    d = 0;
+                    FindObjectOfType<MarsCutScene>().Next2();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+           }
+        }
+        else if (SceneManager.GetActiveScene().name == "WinScreen")
+        {
+           switch(e)
+           {
+                case 1:
+                {
+                    e = 2;
+                    FindObjectOfType<WinCutScene>().Next();
+                    break;
+                }
+                case 2:
+                {
+                    e = 3;
+                    FindObjectOfType<WinCutScene>().Next1();
+                    break;
+                }
+                case 3:
+                {
+                    e = 4;
+                    FindObjectOfType<WinCutScene>().Next2();
+                    break;
+                }
+                case 4:
+                {
+                    e = 0;
+                    FindObjectOfType<WinCutScene>().Next3();
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+           }
+        }
+    }*/
 }
