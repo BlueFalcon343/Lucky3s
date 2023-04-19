@@ -55,9 +55,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-    
-
-
     // health variables
     [Header("Health")]
     public int maxHealth = 10;
@@ -501,7 +498,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("ExitPortal"))
         {
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            SceneManager.LoadScene("WinScreen");
         }
 
         if (other.gameObject.CompareTag("DeathZone"))
