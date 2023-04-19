@@ -520,8 +520,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("DeathZone"))
         {
-            SceneManager.LoadScene("DeathScreen");
             Cursor.visible = true;
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 
