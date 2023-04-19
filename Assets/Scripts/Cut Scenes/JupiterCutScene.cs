@@ -74,7 +74,7 @@ public class JupiterCutScene : MonoBehaviour
             else if (screen == 2)
             {
                 Next2();
-                screen = 0;
+                screen = 3;
             }   
         }
     }

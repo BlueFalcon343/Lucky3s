@@ -79,7 +79,7 @@ public class WinCutScene : MonoBehaviour
             else if (screen == 3)
             {
                 Next3();
-                screen = 0;
+                screen = 4;
             }
         }
     }

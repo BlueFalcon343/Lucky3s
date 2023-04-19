@@ -71,16 +71,11 @@ public class CaturnCutScene : MonoBehaviour
             else if (screen == 2)
             {
                 Next2();
-                screen = 0;
+                screen = 3;
             }    
         }
     }
 
-    public void OnA()
-    {
-
-
-    }
     public void Next()
     {
         CaturnCut1.SetActive(false);
