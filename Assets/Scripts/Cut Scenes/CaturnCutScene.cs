@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class CaturnCutScene : MonoBehaviour
 {
@@ -54,25 +55,30 @@ public class CaturnCutScene : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1f;
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (screen == 0)
+            {
+                Next();
+                screen = 1;
+            }
+            else if (screen == 1)
+            {
+                Next1();
+                screen = 2;
+            }
+            else if (screen == 2)
+            {
+                Next2();
+                screen = 0;
+            }    
+        }
     }
 
     public void OnA()
     {
-        if (screen == 0)
-        {
-            Next();
-            screen = 1;
-        }
-        else if (screen == 1)
-        {
-            Next1();
-            screen = 2;
-        }
-        else if (screen == 2)
-        {
-            Next2();
-            screen = 0;
-        }
+
 
     }
     public void Next()

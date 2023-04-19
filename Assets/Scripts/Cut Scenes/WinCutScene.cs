@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class WinCutScene : MonoBehaviour
 {
@@ -41,9 +42,6 @@ public class WinCutScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
     }
 
     void Update()
@@ -60,29 +58,29 @@ public class WinCutScene : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1f;
         }
-    }
 
-    public void OnA()
-    {
-        if (screen == 0)
+        if (Input.GetButtonDown("Fire1"))
         {
-            Next();
-            screen = 1;
-        }
-        else if (screen == 1)
-        {
-            Next1();
-            screen = 2;
-        }
-        else if (screen == 2)
-        {
-            Next2();
-            screen = 3;
-        }
-        else if (screen == 3)
-        {
-            Next3();
-            screen = 0;
+            if (screen == 0)
+            {
+                Next();
+                screen = 1;
+            }
+            else if (screen == 1)
+            {
+                Next1();
+                screen = 2;
+            }
+            else if (screen == 2)
+            {
+                Next2();
+                screen = 3;
+            }
+            else if (screen == 3)
+            {
+                Next3();
+                screen = 0;
+            }
         }
     }
 

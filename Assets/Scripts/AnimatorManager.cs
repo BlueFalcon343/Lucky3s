@@ -14,13 +14,13 @@ public class AnimatorManager : MonoBehaviour
 
     void Update()
     {
-        bool isWalkingPressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d");
-        bool isWalking = animator.GetBool("isWalking");
-        if (!isWalking && isWalkingPressed)
+        /*bool isWalkingPressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d") || Input.GetButton("Horizontal") || Input.GetButton("Vertical");
+        bool isWalking = animator.GetBool("isWalking");*/
+        if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") > 0)
         {
             animator.SetBool("isWalking", true);
         }
-        if (isWalking && !isWalkingPressed)
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
         {
             animator.SetBool("isWalking", false);
         }

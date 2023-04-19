@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class HubCutScene : MonoBehaviour
@@ -57,31 +58,31 @@ public class HubCutScene : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1f;
         }
-    }
 
-    public void OnA()
-    {
-        Debug.Log("OnA");
-        if (screen == 0)
+        if (Input.GetButtonDown("Fire1"))
         {
-            Next();
-            Debug.Log("Next");
-            screen = 1;
-        }
-        else if (screen == 1)
-        {
-            Next1();
-            screen = 2;
-        }
-        else if (screen == 2)
-        {
-            Next2();
-            screen = 3;
-        }
-        else if (screen == 3)
-        {
-            Next3();
-            screen = 4;
+            Debug.Log("OnA");
+            if (screen == 0)
+            {
+                Next();
+                Debug.Log("Next");
+                screen = 1;
+            }
+            else if (screen == 1)
+            {
+                Next1();
+                screen = 2;
+            }
+            else if (screen == 2)
+            {
+                Next2();
+                screen = 3;
+            }
+            else if (screen == 3)
+            {
+                Next3();
+                screen = 4;
+            }
         }
     }
     

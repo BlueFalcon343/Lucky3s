@@ -46,7 +46,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        FindObjectOfType<CameraController>().ToggleCursor();
+        Cursor.visible = false;
     }
 
     void Pause()
@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        FindObjectOfType<CameraController>().ToggleCursor();
+        Cursor.visible = true;
     }
 
     public void QuitGame()
