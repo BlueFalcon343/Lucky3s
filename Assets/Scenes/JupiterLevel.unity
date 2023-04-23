@@ -2349,9 +2349,17 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -0.44428065
       objectReference: {fileID: 0}
-    - target: {fileID: 7313473891923274006, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 25
+    - target: {fileID: 7313473891923274004, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3022356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313473891923274004, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3022356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313473891923274004, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3022356
       objectReference: {fileID: 0}
     - target: {fileID: 7313473892124531428, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
       propertyPath: m_RootOrder
@@ -2412,6 +2420,22 @@ PrefabInstance:
     - target: {fileID: 7313473892124531433, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
       propertyPath: m_Name
       value: PortalToHub
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313473892124531434, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_RenderAlignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313473892751874917, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0935594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313473892751874917, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0935594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313473892751874917, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0935594
       objectReference: {fileID: 0}
     - target: {fileID: 7313473892751874919, guid: f0b55b1535a0fc5478146182f417e517, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -7332,7 +7356,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881204372}
-  m_LocalRotation: {x: -0.01814146, y: -0, z: -0, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141456, y: -0, z: 1.1641532e-10, w: 0.9998355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

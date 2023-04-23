@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1741032072609914252}
   - component: {fileID: 1741032072609914243}
   - component: {fileID: 1741032072609914242}
+  - component: {fileID: 2021135834}
   m_Layer: 6
   m_Name: PortalToMars
   m_TagString: PortalToMars
@@ -25,16 +26,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741032072609914241}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.71, y: 4.59, z: 28.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.70720774, y: 0.70720774, z: 0.70720774}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1741032074309360653}
   - {fileID: 1741032072945528444}
   - {fileID: 200830814254519744}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1741032072609914243
 ParticleSystem:
@@ -4798,7 +4799,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 1
+  m_RenderAlignment: 2
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
@@ -4817,6 +4818,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2021135834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741032072609914241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c91dc219c7c51478757ee90f08fdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portal: {fileID: 0}
 --- !u!1 &1741032072945528435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,7 +4858,7 @@ Transform:
   m_GameObject: {fileID: 1741032072945528435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1741032072609914252}
@@ -4933,7 +4947,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8.5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4986,7 +5000,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5038,9 +5052,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 4
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      minMaxState: 2
+      minColor: {r: 1, g: 0.42985752, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.920991, b: 0.6392157, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0, b: 0, a: 1}
@@ -5685,7 +5699,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -14426,7 +14440,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 1
+  m_RenderAlignment: 2
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
@@ -14488,5 +14502,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.386852, y: 14.811899, z: 1}
-  m_Center: {x: -0.37376055, y: 1.8341467, z: 0}
+  m_Size: {x: 9.427865, y: 9.354403, z: 2.5112517}
+  m_Center: {x: 0.46012056, y: 0.50446624, z: -0.7556244}

@@ -19,6 +19,9 @@ TagManager:
   - PortalToCaturn
   - Micean
   - Yarn
+  - CatCoin
+  - PortalInToCaturn
+  - ExitPortal
   layers:
   - Default
   - TransparentFX
@@ -38,7 +41,7 @@ TagManager:
   - NPC5
   - CatPedestal
   - YarnPedestal
-  - 
+  - NPCGod
   - 
   - 
   - 

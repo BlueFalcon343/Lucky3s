@@ -9,6 +9,7 @@ public class Pedestal : MonoBehaviour
     public GameObject Portal;
     bool isCatnip = false;
     bool isYarnball = false;
+    public bool isPortal = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class Pedestal : MonoBehaviour
         Catnip.SetActive(false);
         Yarnball.SetActive(false);
         Portal.SetActive(false);
+        isPortal = false;
     }
 
     void Update()
@@ -23,6 +25,7 @@ public class Pedestal : MonoBehaviour
         if (isCatnip && isYarnball)
         {
             Portal.SetActive(true);
+            isPortal = true;
         }
     }
 

@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
     bool talk3;
     bool talk4;
     bool talk5;
+    bool talk6;
     bool pedestal1;
     bool pedestal2;
     public LayerMask NPC1;
@@ -107,6 +108,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask NPC5;
     public LayerMask CatPedestal;
     public LayerMask YarnPedestal;
+    public LayerMask NPCGod;
 
     //Scenes
     int sceneTracker = 0;
@@ -311,23 +313,25 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            MOVESPEED = 30f;
+            MOVESPEED = 35f;
         }
         
         ToggleDialogue();
 
         // fast fall
-        if(jumpBoost == 0)
+        if(!grounded)
         {
             count += Time.deltaTime;
+            jumpforce = 10f;
             if (count >= 1)
             {
-                rb.AddForce(Vector3.down * count * 1.5f, ForceMode.Force);
+                rb.AddForce(Vector3.down * count * 1.25f, ForceMode.Force);
+                jumpforce = 10f * count / 2f;
             }
         }
         else
         {
-            count = -1;
+            count = -2;
         }
     }
 
@@ -359,7 +363,7 @@ public class PlayerController : MonoBehaviour
         if(jumpBoost >= 1 && grounded == false)
         {
             rocketSource.Play();
-            jumpforce = 10f;
+            // jumpforce = 10f;
             jumpBoost = jumpBoost - 1;
             JumpBoostUI.value = jumpBoost;
             rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
@@ -388,6 +392,7 @@ public class PlayerController : MonoBehaviour
         talk3 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC3);
         talk4 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC4);
         talk5 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPC5);
+        talk6 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, NPCGod);
         pedestal1 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, CatPedestal);
         pedestal2 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, YarnPedestal);
         
@@ -551,6 +556,10 @@ public class PlayerController : MonoBehaviour
         {
             DisplayDialogue(5);
         }
+        else if (talk6)
+        {
+            DisplayDialogue(6);
+        }
         else if (pedestal1)
         {
             FindObjectOfType<Pedestal>().ShowCatnip();
@@ -593,7 +602,7 @@ public class PlayerController : MonoBehaviour
             case 4:
             {
                 dialogueBox.enabled = true;
-                dialogueText.text = "There are energy cores scattered across the map that you can collect. If you have one, press (RMB/Y) to fire a blast of freezing energy that can stop those darn non-human cats in their tracks.";
+                dialogueText.text = "These energy cores are scattered across the map. If you have one, press (RMB/Y) to fire a freezing blast to stop those darn non-human cats in their tracks.";
                 break;
             }
             case 5:
@@ -601,6 +610,21 @@ public class PlayerController : MonoBehaviour
                 dialogueBox.enabled = true;
                 dialogueText.text = "You can find little Miceans on your journey. If you have one, press (E/X) to throw them and distract the cats. Good Luck!";
                 break;
+            }
+            case 6:
+            {
+                if(!(FindObjectOfType<Pedestal>().isPortal))
+                {
+                    dialogueBox.enabled = true;
+                    dialogueText.text = "Welcome human. Present your gifts on the pedestals.";
+                    break;
+                }
+                else
+                {
+                    dialogueBox.enabled = true;
+                    dialogueText.text = "I thank you for all that you've done. Farewell.";
+                    break;
+                }
             }
             default:
             {

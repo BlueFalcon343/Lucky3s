@@ -389,6 +389,9 @@ MonoBehaviour:
   YarnPedestal:
     serializedVersion: 2
     m_Bits: 131072
+  NPCGod:
+    serializedVersion: 2
+    m_Bits: 262144
   tutorial: 0
   dialogueBox: {fileID: 0}
   dialogueText: {fileID: 0}
