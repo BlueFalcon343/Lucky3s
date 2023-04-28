@@ -27,6 +27,7 @@ public class WinCutScene : MonoBehaviour
             WinScene = true;
             WinCut1.SetActive(true);
             screen = 0;
+            PlayerController.CutSceneActive = true;
         }
     }
 
@@ -102,6 +103,7 @@ public class WinCutScene : MonoBehaviour
     {
         WinCut4.SetActive(false);
         WinScene = false;
+        PlayerController.CutSceneActive = false;
         SceneManager.LoadScene("MainMenu");
     }
 }

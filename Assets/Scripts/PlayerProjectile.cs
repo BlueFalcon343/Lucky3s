@@ -20,6 +20,10 @@ public class PlayerProjectile : MonoBehaviour
 
         if ((transform.position - startPosition).magnitude > 40.0f)
         {
+            gameObject.GetComponent<Collider>().enabled = false;
+        }
+        if ((transform.position - startPosition).magnitude > 1000.0f)
+        {
             Destroy(gameObject);
         }
     }

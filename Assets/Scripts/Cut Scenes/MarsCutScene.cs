@@ -25,6 +25,7 @@ public class MarsCutScene : MonoBehaviour
         {
             MarsScene = true;
             MarsCut1.SetActive(true);
+            PlayerController.CutSceneActive = true;
         }
     }
 

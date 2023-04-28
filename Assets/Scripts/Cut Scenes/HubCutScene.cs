@@ -27,6 +27,7 @@ public class HubCutScene : MonoBehaviour
             HubScene = true;
             IntroCut1.SetActive(true);
             int screen = 0;
+            PlayerController.CutSceneActive = true;
         }
     }
 
@@ -106,6 +107,7 @@ public class HubCutScene : MonoBehaviour
         IntroCut4.SetActive(false);
         HubScene = false;
         Cursor.visible = false;
+        PlayerController.CutSceneActive = false;
     }
 }
 

@@ -4821,7 +4821,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503654882}
-  m_LocalRotation: {x: -0.018141456, y: -0, z: -0, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141458, y: -0, z: -0.0000000018626451, w: 0.9998355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8071,6 +8071,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3.000122
       objectReference: {fileID: 0}
+    - target: {fileID: 6459280475152958553, guid: 8471247576e955b4bb57d5a370146f26, type: 3}
+      propertyPath: m_Name
+      value: Audio Source 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459280475972770283, guid: 8471247576e955b4bb57d5a370146f26, type: 3}
+      propertyPath: m_Name
+      value: Audio Source 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6459280476312386033, guid: 8471247576e955b4bb57d5a370146f26, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4
@@ -8162,6 +8170,10 @@ PrefabInstance:
     - target: {fileID: 6459280476452233315, guid: 8471247576e955b4bb57d5a370146f26, type: 3}
       propertyPath: m_Name
       value: Cut Scene Mars
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459280476826931810, guid: 8471247576e955b4bb57d5a370146f26, type: 3}
+      propertyPath: m_Name
+      value: Audio Source 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

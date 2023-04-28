@@ -127,7 +127,7 @@ public class EnemyController : MonoBehaviour
         if (other.gameObject.CompareTag("Fire"))
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3.5f);
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             //Instantiate(Shakes, ShakesPoint1.position, ShakesPoint1.rotation);
             //Instantiate(Shakes, ShakesPoint2.position, ShakesPoint2.rotation);

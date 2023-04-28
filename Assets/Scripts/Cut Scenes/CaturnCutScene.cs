@@ -24,6 +24,7 @@ public class CaturnCutScene : MonoBehaviour
         {
             CaturnScene = true;
             CaturnCut1.SetActive(true);
+            PlayerController.CutSceneActive = true;
         }
     }
 
@@ -90,5 +91,6 @@ public class CaturnCutScene : MonoBehaviour
         CaturnCut3.SetActive(false);
         CaturnScene = false;
         Cursor.visible = false;
+        PlayerController.CutSceneActive = false;
     }
 }

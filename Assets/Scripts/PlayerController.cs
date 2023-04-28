@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+//using System.Diagnostics;
 //using static System.Net.Mime.MediaTypeNames;
 //using System.Diagnostics;
 
@@ -22,6 +23,9 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
     public float count = -1;
+
+    //Script Fix
+    public static bool CutSceneActive = false;
 
     //animator
     Animator animator;
@@ -201,7 +205,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!PauseMenu.GameIsPaused)
+        
+        if (!PauseMenu.GameIsPaused || !CutSceneActive)
         {
             movement = (movementY * FindObjectOfType<CameraController>()._orientation.forward) + (movementX * FindObjectOfType<CameraController>()._orientation.right);
             rb.AddForce(movement.normalized * MOVESPEED, ForceMode.Force);
@@ -221,7 +226,8 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isFalling", true);
         }
-        
+
+
         while (grounded == true && jumpBoost <= 4)
         {
             jumpBoost = jumpBoost + 1;
@@ -236,9 +242,9 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {       
+    {
         //Ground Check Raycast 
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, WhatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.1f, WhatIsGround);
 
         //Spawn Set Transform
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -355,11 +361,10 @@ public class PlayerController : MonoBehaviour
     void OnJump()
     {
         //animator.SetBool("isJumping", true);
-        if (grounded == true)
+        if (grounded)
         {
             rb.AddForce(transform.up * jumpforce, ForceMode.Impulse);
         }
-
         if(jumpBoost >= 1 && grounded == false)
         {
             rocketSource.Play();
@@ -370,6 +375,15 @@ public class PlayerController : MonoBehaviour
             Instantiate(BootFlame, jumpPointLeft.position, jumpPointLeft.rotation);
             Instantiate(BootFlame, jumpPointRight.position, jumpPointRight.rotation);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        grounded = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        grounded = false;
     }
 
     public void ChangeHealth(int amount)
@@ -396,7 +410,7 @@ public class PlayerController : MonoBehaviour
         pedestal1 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, CatPedestal);
         pedestal2 = Physics.Raycast(transform.position, FindObjectOfType<CameraController>()._orientation.forward, 10f, YarnPedestal);
         
-        if ((gunheat <= 0 && !PauseMenu.GameIsPaused) && !(talk1||talk2||talk3||talk4||talk5||pedestal1||pedestal2) && !(dialogue))
+        if ((gunheat <= 0 && !PauseMenu.GameIsPaused && !CutSceneActive) && !(talk1||talk2||talk3||talk4||talk5||pedestal1||pedestal2) && !(dialogue))
         {
             PlayerProjectile.tag = "Fire";
             waterSource.Play();

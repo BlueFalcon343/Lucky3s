@@ -24,6 +24,7 @@ public class JupiterCutScene : MonoBehaviour
         {
             JupiterScene = true;
             JupiterCut1.SetActive(true);
+            PlayerController.CutSceneActive = true;
         }
     }
 
@@ -91,5 +92,6 @@ public class JupiterCutScene : MonoBehaviour
         JupiterCut3.SetActive(false);
         JupiterScene = false;
         Cursor.visible = false;
+        PlayerController.CutSceneActive = false;
     }
 }
