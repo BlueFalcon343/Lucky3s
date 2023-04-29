@@ -126,6 +126,9 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public bool dialogue;
 
+    //Extra audio
+    public AudioSource squeakSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -482,6 +485,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Micean"))
         {
+            squeakSound.Play();
             Micean = Micean + 1;
             scoreM = scoreM + 1;
             scoreMice.text = scoreM.ToString();

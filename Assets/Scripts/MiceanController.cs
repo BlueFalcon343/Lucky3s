@@ -9,8 +9,6 @@ public class MiceanController : MonoBehaviour
 
     public LayerMask whatIsGround;
 
-    //Audio
-    public AudioSource squeakSound;
 
     //Patroling
     public Vector3 walkPoint;
@@ -53,7 +51,6 @@ public class MiceanController : MonoBehaviour
         Debug.Log("Colliding");
         if (other.gameObject.CompareTag("Player"))
         {
-            //squeakSound.Play();
             Destroy(gameObject);
         }
     }

@@ -8737,7 +8737,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 524151
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -19538,7 +19538,7 @@ Transform:
   - {fileID: 2950494478890699837}
   - {fileID: 2950494478736715301}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &2950494479759573750
 ParticleSystem:

@@ -88,6 +88,7 @@ public class CaturnCutScene : MonoBehaviour
     }
     public void Next2()
     {
+        GameObject.Find("CutsceneMusicCaturn").GetComponent<AudioSource>().mute = true;
         CaturnCut3.SetActive(false);
         CaturnScene = false;
         Cursor.visible = false;

@@ -89,6 +89,7 @@ public class JupiterCutScene : MonoBehaviour
     }
     public void Next2()
     {
+        GameObject.Find("CutsceneMusicJupiter").GetComponent<AudioSource>().mute = true;
         JupiterCut3.SetActive(false);
         JupiterScene = false;
         Cursor.visible = false;

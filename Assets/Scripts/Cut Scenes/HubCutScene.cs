@@ -104,6 +104,7 @@ public class HubCutScene : MonoBehaviour
     }
     public void Next3()
     {
+        GameObject.Find("CutsceneMusicHub").GetComponent<AudioSource>().mute = true;
         IntroCut4.SetActive(false);
         HubScene = false;
         Cursor.visible = false;

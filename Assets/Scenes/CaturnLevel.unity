@@ -304,9 +304,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ca749d52f513c7847943eec3dbc79433, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cba426b42bb214946b6b0e98acdf5acd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7238,6 +7238,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749021947, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_Name
+      value: CutsceneMusicCaturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 905914843559826507, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.000122
+      objectReference: {fileID: 0}
     - target: {fileID: 3279021213332948106, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_Name
       value: Audio Source 1
@@ -7349,6 +7357,14 @@ PrefabInstance:
     - target: {fileID: 3279021214688667463, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661276968944897000, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729551240328677123, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.000122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

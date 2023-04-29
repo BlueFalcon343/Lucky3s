@@ -135,6 +135,7 @@ public class EnemyController : MonoBehaviour
 
         if (other.gameObject.CompareTag("AltFire"))
         {
+            animator.speed = 0;
             Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             freezeHit.Play();
             this.enabled = false;

@@ -7,6 +7,8 @@ public class CatCoin : MonoBehaviour
     //public AudioClip Catnip;
     public int rotateSpeed;
 
+    public AudioSource coinSound;
+
     void Start()
     {
         rotateSpeed = 2;
@@ -23,6 +25,7 @@ public class CatCoin : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //AudioSource.PlayClipAtPoint(Catnip, transform.position);
+            coinSound.Play();
             transform.position += new Vector3(0, 1, 0);
             gameObject.GetComponent<Collider>().enabled = false;
             rotateSpeed = 4;
