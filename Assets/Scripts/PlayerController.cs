@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public Transform _orientation;
     public GameObject _camera;
     public float count = -1;
+    Vector3 platform;
 
     //Script Fix
     public static bool CutSceneActive = false;
@@ -120,6 +121,8 @@ public class PlayerController : MonoBehaviour
     public bool tutorial = false;
     // cutscene progression
     int a = 1, b = 1, c = 1, d = 1, e = 1;
+    int type;
+    bool invert;
 
     //Dialogue
     public RawImage dialogueBox;
@@ -208,10 +211,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
         if (!PauseMenu.GameIsPaused || !CutSceneActive)
         {
             movement = (movementY * FindObjectOfType<CameraController>()._orientation.forward) + (movementX * FindObjectOfType<CameraController>()._orientation.right);
+            movement = movement + platform;
             rb.AddForce(movement.normalized * MOVESPEED, ForceMode.Force);
             movement = Vector3.zero;
         }
@@ -246,6 +249,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        MovePlayer();
         //Ground Check Raycast 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.1f, WhatIsGround);
 
@@ -335,12 +339,12 @@ public class PlayerController : MonoBehaviour
             if (count >= 1)
             {
                 rb.AddForce(Vector3.down * count * 1.25f, ForceMode.Force);
-                jumpforce = 10f * count / 2f;
+                jumpforce = 10f * count / 3f;
             }
         }
         else
         {
-            count = -2;
+            count = -5;
         }
     }
 
@@ -378,6 +382,11 @@ public class PlayerController : MonoBehaviour
             Instantiate(BootFlame, jumpPointLeft.position, jumpPointLeft.rotation);
             Instantiate(BootFlame, jumpPointRight.position, jumpPointRight.rotation);
         }
+    }
+
+    void OnPause()
+    {
+        FindObjectOfType<PauseMenu>().IsPaused();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -552,6 +561,88 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void MovePlayer()
+    {
+        switch(type)
+        {
+            case 1:
+            {
+                if (!invert)
+                {
+                    rb.AddForce(-0.5f * Vector3.right, ForceMode.Impulse);
+                    //platform = -1f * Vector3.right;
+                }
+                else
+                {
+                    rb.AddForce(0.5f * Vector3.right, ForceMode.Impulse);
+                    //platform = Vector3.right;
+                }
+                break;
+            }
+            case 2:
+            {
+                if (invert)
+                {
+                    rb.AddForce(-0.5f * Vector3.right, ForceMode.Impulse);
+                    //platform = -1f * Vector3.right;
+                }
+                else
+                {
+                    rb.AddForce(0.5f * Vector3.right, ForceMode.Impulse);
+                    //platform = Vector3.right;
+                }
+                break;
+            }
+            case 3:
+            {
+                if (!invert)
+                {
+                    rb.AddForce(-0.5f * Vector3.forward, ForceMode.Impulse);
+                    //platform = -1f * Vector3.forward;
+                }
+                else
+                {
+                    rb.AddForce(0.5f * Vector3.forward, ForceMode.Impulse);
+                    //platform = Vector3.forward;
+                }
+                break;
+            }
+            case 4:
+            {
+                if (!invert)
+                {
+                    rb.AddForce(-0.5f * Vector3.down, ForceMode.Impulse);
+                    //platform = -1f * Vector3.down;
+                }
+                else
+                {
+                    rb.AddForce(0.5f * Vector3.down, ForceMode.Impulse);
+                    //platform = Vector3.down;
+                }
+                break;
+            }
+            case 5:
+            {
+                if (!invert)
+                {
+                    rb.AddForce(-0.5f * Vector3.up, ForceMode.Impulse);
+                    //platform = -1f * Vector3.up;
+                }
+                else
+                {
+                    rb.AddForce(0.5f * Vector3.up, ForceMode.Impulse);
+                    //platform = Vector3.up;
+                }
+                break;
+            }
+            default:
+            {
+                //platform = Vector3.zero;
+                break;
+            }
+        }
+    }
+
     void ToggleDialogue()
     {
         if (talk1)
@@ -652,6 +743,15 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void ChangeType(int platform)
+    {
+        type = platform;
+    }
+    public void ToggleInvert(bool isInverted)
+    {
+        invert = isInverted;
     }
 /*
     void ToggleCutScene()
