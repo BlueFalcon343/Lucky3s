@@ -12,6 +12,7 @@ public class GeyserBoost : MonoBehaviour
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
             rb.AddForce(Vector3.up * boostHeight);
+            FindObjectOfType<PlayerController>().count = -5;
         }
     }
 }
