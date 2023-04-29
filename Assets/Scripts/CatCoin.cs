@@ -9,7 +9,7 @@ public class CatCoin : MonoBehaviour
 
     void Start()
     {
-        rotateSpeed = 0;
+        rotateSpeed = 2;
     }
 
     void Update()
