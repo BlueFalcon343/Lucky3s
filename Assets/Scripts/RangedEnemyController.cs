@@ -38,10 +38,10 @@ public class RangedEnemyController : MonoBehaviour
     public GameObject EnemyRanged;
 
     //Particles
-    //public Transform ShakesPoint1, ShakesPoint2;
-    //public Transform FreezePoint;
-    //public ParticleSystem Frozen;
-    //public ParticleSystem Shakes;
+    public Transform ShakesPoint1, ShakesPoint2;
+    public Transform FreezePoint;
+    public ParticleSystem Frozen;
+    public ParticleSystem Shakes;
 
     private void Awake()
     {
@@ -141,16 +141,17 @@ public class RangedEnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Fire"))
         {
+            Instantiate(Shakes, ShakesPoint1.position, ShakesPoint1.rotation);
+            Instantiate(Shakes, ShakesPoint2.position, ShakesPoint2.rotation);
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             yield return new WaitForSeconds(3.5f);
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-            // Instantiate(Shakes, ShakesPoint1.position, ShakesPoint1.rotation);
-            // Instantiate(Shakes, ShakesPoint2.position, ShakesPoint2.rotation);
+
         }
 
         if (other.gameObject.CompareTag("AltFire"))
         {
-            // Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
+            Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             freezeImpact.Play();
             this.enabled = false;
             EnemyRanged.tag = "Dead";
