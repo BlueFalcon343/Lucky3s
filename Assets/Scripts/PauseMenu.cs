@@ -66,6 +66,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         IsPaused();
+        FindObjectOfType<PlayerController>().currentHealth = 10;
         SceneManager.LoadScene("MainMenu");
     }
 }

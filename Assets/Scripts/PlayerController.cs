@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     [Header("Health")]
     public int maxHealth = 10;
     public int health { get { return currentHealth; } }
-    int currentHealth;
+    public int currentHealth;
 
     //Jump and Boost Mechanics
     [Header("Jump and Boost")]

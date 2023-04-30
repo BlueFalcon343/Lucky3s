@@ -13,6 +13,7 @@ public class DeathMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
+        FindObjectOfType<PlayerController>().currentHealth = 10;
         SceneManager.LoadScene("HubLevel");
         Cursor.visible = false;
         PlayerController.CutSceneActive = false;
@@ -20,6 +21,7 @@ public class DeathMenu : MonoBehaviour
     }
     public void QuitGame()
     {
+        FindObjectOfType<PlayerController>().currentHealth = 10;
         SceneManager.LoadScene("MainMenu");
         Cursor.visible = true; 
         PlayerController.CutSceneActive = true;

@@ -253,8 +253,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.9575591, a: 1}
-  m_Intensity: 5
-  m_Range: 15
+  m_Intensity: 4.51
+  m_Range: 12.09
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -529,7 +529,7 @@ Transform:
   - {fileID: 4805956506153502412}
   - {fileID: 9129650240822386696}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &167276984
 BoxCollider:
