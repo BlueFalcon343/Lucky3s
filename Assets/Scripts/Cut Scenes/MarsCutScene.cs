@@ -92,6 +92,7 @@ public class MarsCutScene : MonoBehaviour
     {
         GameObject.Find("CutsceneMusicMars").GetComponent<AudioSource>().mute = true;
         MarsCut3.SetActive(false);
+        PlayerController.CutSceneActive = false;
         MarsScene = false;
         Cursor.visible = false;
     }

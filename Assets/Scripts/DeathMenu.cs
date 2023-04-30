@@ -8,16 +8,19 @@ public class DeathMenu : MonoBehaviour
     void Awake()
     {
         Cursor.visible = true;
-        FindObjectOfType<CameraController>().ToggleCursor();
+        //FindObjectOfType<CameraController>().ToggleCursor();
+        PlayerController.CutSceneActive = true;
     }
     public void LoadMenu()
     {
         SceneManager.LoadScene("HubLevel");
-        FindObjectOfType<CameraController>().ToggleCursor();
+        Cursor.visible = false;
+        //FindObjectOfType<CameraController>().ToggleCursor();
     }
     public void QuitGame()
     {
         SceneManager.LoadScene("MainMenu");
+        Cursor.visible = true;
     }
 
     public void OnA()

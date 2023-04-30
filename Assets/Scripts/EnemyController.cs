@@ -138,8 +138,10 @@ public class EnemyController : MonoBehaviour
             animator.speed = 0;
             freezeHit.Play();
             this.enabled = false;
-            Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
+            //Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             Enemy.tag = "Dead";
+            yield return new WaitForSeconds(2f);
+            Instantiate(Frozen, FreezePoint.position, FreezePoint.rotation);
             // gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             //yield return new WaitForSeconds(2f);
             //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
