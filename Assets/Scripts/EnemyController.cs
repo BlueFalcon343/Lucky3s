@@ -51,7 +51,14 @@ public class EnemyController : MonoBehaviour
     {
         //Checks for player in sight range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-
+        if(!PauseMenu.GameIsPaused)
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false; 
+        }
+        else
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        }
         if (!playerInSightRange) Patroling();
         if (playerInSightRange) ChasePlayer();
     }

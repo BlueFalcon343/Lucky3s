@@ -58,7 +58,14 @@ public class RangedEnemyController : MonoBehaviour
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
+        if (!PauseMenu.GameIsPaused)
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
+        else
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        }
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
