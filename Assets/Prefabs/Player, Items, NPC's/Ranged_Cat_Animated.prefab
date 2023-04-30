@@ -1052,6 +1052,7 @@ Transform:
   - {fileID: 6578631300529651902}
   - {fileID: 3723586934134502317}
   - {fileID: 7868383507307354380}
+  - {fileID: 7414223266570386249}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1239,7 +1240,7 @@ MonoBehaviour:
   ShakesPoint1: {fileID: 6578631300529651902}
   ShakesPoint2: {fileID: 3723586934134502317}
   FreezePoint: {fileID: 7868383507307354380}
-  Frozen: {fileID: 4456247492785392085, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+  Frozen: {fileID: 7414223266570386254}
   Shakes: {fileID: 4028013017127128763, guid: 4c5c95decc3b6654ebafc6e969fe68b1, type: 3}
 --- !u!1 &6506605501282307782
 GameObject:
@@ -1848,3 +1849,72 @@ Transform:
   m_Father: {fileID: 8560625253944929999}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6571694942567002779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 5963789393509054247}
+    m_Modifications:
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456247492785392087, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+      propertyPath: m_Name
+      value: FrozenGlow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+--- !u!4 &7414223266570386249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4456247492785392082, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+  m_PrefabInstance: {fileID: 6571694942567002779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7414223266570386254 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4456247492785392085, guid: 0c3481273bea7d942a1cac1812b4ed68, type: 3}
+  m_PrefabInstance: {fileID: 6571694942567002779}
+  m_PrefabAsset: {fileID: 0}

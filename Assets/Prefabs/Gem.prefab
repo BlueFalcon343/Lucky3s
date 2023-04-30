@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5149022042736787645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0003, y: 0.0163, z: -0.0574}
+  m_LocalPosition: {x: -0, y: 0.0243, z: -0.0567}
   m_LocalScale: {x: 58.698956, y: 58.698956, z: 58.698956}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -253,8 +253,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.9575591, a: 1}
-  m_Intensity: 5.22
-  m_Range: 7.27
+  m_Intensity: 5
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -501,6 +501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8591970228809174656}
+  - component: {fileID: 167276984}
   m_Layer: 0
   m_Name: Gem
   m_TagString: Untagged
@@ -528,5 +529,18 @@ Transform:
   - {fileID: 4805956506153502412}
   - {fileID: 9129650240822386696}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &167276984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968672136354288698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017646123, y: 0.020940242, z: 0.016666751}
+  m_Center: {x: 0.00054904877, y: 0.016470773, z: -0.057085328}
