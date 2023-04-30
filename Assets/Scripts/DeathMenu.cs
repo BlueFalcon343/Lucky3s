@@ -15,12 +15,14 @@ public class DeathMenu : MonoBehaviour
     {
         SceneManager.LoadScene("HubLevel");
         Cursor.visible = false;
+        PlayerController.CutSceneActive = false;
         //FindObjectOfType<CameraController>().ToggleCursor();
     }
     public void QuitGame()
     {
         SceneManager.LoadScene("MainMenu");
-        Cursor.visible = true;
+        Cursor.visible = true; 
+        PlayerController.CutSceneActive = true;
     }
 
     public void OnA()

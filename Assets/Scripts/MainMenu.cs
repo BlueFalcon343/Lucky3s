@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("HubLevel");
+        PlayerController.CutSceneActive = false;
     }
     public void QuitGame()
     {
