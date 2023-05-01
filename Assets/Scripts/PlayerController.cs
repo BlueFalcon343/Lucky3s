@@ -466,7 +466,7 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<PauseMenu>().Resume();
         }
-
+        FindObjectOfType<MainMenu>().OnA();
         /*if ((FindObjectOfType<HubCutScene>().HubScene)||(FindObjectOfType<JupiterCutScene>().JupiterScene)||(FindObjectOfType<MarsCutScene>().MarsScene)||(FindObjectOfType<CaturnCutScene>().CaturnScene)||(FindObjectOfType<WinCutScene>().WinScene))
         {
             ToggleCutScene();
@@ -479,6 +479,17 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<PauseMenu>().QuitGame();
         }
+        FindObjectOfType<MainMenu>().OnB();
+    }
+
+    public void OnX()
+    {
+        FindObjectOfType<MainMenu>().OnX();
+    }
+
+    public void OnY()
+    {
+        FindObjectOfType<MainMenu>().OnY();
     }
 
     // Item Collection and Portals

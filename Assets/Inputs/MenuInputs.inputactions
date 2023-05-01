@@ -1,5 +1,5 @@
 {
-    "name": "PlayerInputs",
+    "name": "MenuInputs",
     "maps": [
         {
             "name": "Player",
@@ -299,11 +299,33 @@
                 },
                 {
                     "name": "",
+                    "id": "178467f0-8b93-4ff6-9031-b005f7097dc0",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "04dfdd2a-667f-4c50-9b9f-329319a02fe7",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed5a37d2-83a7-4a64-9092-b7a2619e1b5f",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "X",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -321,11 +343,33 @@
                 },
                 {
                     "name": "",
+                    "id": "a1890cf0-cc98-444b-9de7-8a2892856a6b",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7e0260ea-53fc-4756-8141-b8b72a20f592",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67b7b6e3-52df-4ef6-8fd9-de480ce67469",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "B",
                     "isComposite": false,
                     "isPartOfComposite": false
