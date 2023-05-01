@@ -467,6 +467,7 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<PauseMenu>().Resume();
         }
         FindObjectOfType<MainMenu>().OnA();
+        FindObjectOfType<DeathMenu>().OnB();
         /*if ((FindObjectOfType<HubCutScene>().HubScene)||(FindObjectOfType<JupiterCutScene>().JupiterScene)||(FindObjectOfType<MarsCutScene>().MarsScene)||(FindObjectOfType<CaturnCutScene>().CaturnScene)||(FindObjectOfType<WinCutScene>().WinScene))
         {
             ToggleCutScene();
@@ -480,6 +481,7 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<PauseMenu>().QuitGame();
         }
         FindObjectOfType<MainMenu>().OnB();
+        FindObjectOfType<DeathMenu>().OnB();
     }
 
     public void OnX()
