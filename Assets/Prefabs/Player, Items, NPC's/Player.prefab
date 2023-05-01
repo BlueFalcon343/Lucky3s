@@ -42,8 +42,6 @@ Transform:
   - {fileID: 1130889759220100758}
   - {fileID: 660554707021462910}
   - {fileID: 660554707809777489}
-  - {fileID: 660554707408381828}
-  - {fileID: 660554706953315091}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -352,6 +350,7 @@ MonoBehaviour:
   CatCoinUI: {fileID: 0}
   scoreCoin: {fileID: 0}
   maxHealth: 10
+  currentHealth: 0
   jumpBoost: 5
   jumpforce: 10
   jumpPointLeft: {fileID: 660554707408381828}
@@ -856,12 +855,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660554706953315090}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0039554276, y: 0.0023817748, z: -0.000270842}
-  m_LocalScale: {x: 0.005744105, y: 0.0026373668, z: 0.026139157}
+  m_LocalRotation: {x: 0.07419981, y: -0.99710274, z: -0.0026306508, w: -0.016544512}
+  m_LocalPosition: {x: -0.00019414353, y: -0.0050568287, z: -0.00037248572}
+  m_LocalScale: {x: 0.0057441043, y: 0.002637367, z: 0.026139159}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1053976988369636450}
+  m_Father: {fileID: 2401402383100493089}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &660554706953315102
@@ -984,12 +983,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660554707408381947}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0040320707, y: 0.0020858168, z: -0.000270842}
-  m_LocalScale: {x: 0.005744105, y: 0.0026373668, z: 0.026139157}
+  m_LocalRotation: {x: -0.07310914, y: -0.99722725, z: -0.0028034446, w: 0.013607267}
+  m_LocalPosition: {x: 0.0002872757, y: -0.0049834377, z: -0.00066871056}
+  m_LocalScale: {x: 0.0057441024, y: 0.0026373665, z: 0.026139153}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1053976988369636450}
+  m_Father: {fileID: 5811435969514380071}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &660554707408381831
@@ -1309,6 +1308,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3545271587288112881}
+  - {fileID: 660554707408381828}
   m_Father: {fileID: 3004554872668714424}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1984,6 +1984,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7390032153861119363}
+  - {fileID: 660554706953315091}
   m_Father: {fileID: 97938356723944949}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

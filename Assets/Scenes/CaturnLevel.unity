@@ -7270,6 +7270,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3.000122
       objectReference: {fileID: 0}
+    - target: {fileID: 3279021212909910967, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279021213332948106, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_Name
       value: Audio Source 1
@@ -7281,6 +7285,14 @@ PrefabInstance:
     - target: {fileID: 3279021214319950114, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279021214366448013, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d293a93dd0d164a48a47536a3754f54f, type: 3}
+    - target: {fileID: 3279021214366448015, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279021214449311920, guid: 2ddde78927e37cc48b7cfd6b40cc605f, type: 3}
       propertyPath: m_Name
