@@ -101,6 +101,7 @@ public class WinCutScene : MonoBehaviour
     }
     public void Next3()
     {
+        GameObject.Find("CutSceneWinAudio").GetComponent<AudioSource>().mute = true;
         WinCut4.SetActive(false);
         WinScene = false;
         PlayerController.CutSceneActive = false;

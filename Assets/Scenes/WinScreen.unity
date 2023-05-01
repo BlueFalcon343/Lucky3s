@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 645230584}
   - component: {fileID: 645230585}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: CutSceneWinAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
